@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ما هو معدل الرسملة (Cap Rate)؟ شرح مبسط بالأمثلة | القيمة العادلة</title>
+<meta name="description" content="شرح مبسط لمعدل الرسملة (Cap Rate) وكيف تستخدمه لتقييم المشاريع والعقارات المدرّة للدخل، مع أمثلة بالريال.">
+<link rel="canonical" href="https://hassma0k.github.io/fv/maadal-alrasmala.html">
+<meta name="apple-itunes-app" content="app-id=6805596650">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ما هو معدل الرسملة (Cap Rate)؟ شرح مبسط بالأمثلة | القيمة العادلة">
+<meta property="og:description" content="شرح مبسط لمعدل الرسملة (Cap Rate) وكيف تستخدمه لتقييم المشاريع والعقارات المدرّة للدخل، مع أمثلة بالريال.">
+<meta property="og:url" content="https://hassma0k.github.io/fv/maadal-alrasmala.html">
+<meta property="og:locale" content="ar_SA">
+<meta name="theme-color" content="#f4f6fb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20width%3D%2238%22%20height%3D%2238%22%20viewBox%3D%220%200%201024%201024%22%20aria-hidden%3D%22true%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22lg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221024%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f5f7fb%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23e6eaf1%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22lb%22%20x1%3D%22150%22%20y1%3D%220%22%20x2%3D%22874%22%20y2%3D%220%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2334C759%22%2F%3E%3Cstop%20offset%3D%22.5%22%20stop-color%3D%22%230A84FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%235E5CE6%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221024%22%20height%3D%221024%22%20fill%3D%22url(%23lg)%22%2F%3E%3Crect%20x%3D%22150%22%20y%3D%22464%22%20width%3D%22724%22%20height%3D%2296%22%20rx%3D%2248%22%20fill%3D%22url(%23lb)%22%2F%3E%3Ccircle%20cx%3D%22599%22%20cy%3D%22512%22%20r%3D%2278%22%20fill%3D%22%23fff%22%20stroke%3D%22%230A84FF%22%20stroke-width%3D%2218%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#1c1c1e;--muted:#5f6470;--soft:#8e8e93;--ground:#f4f6fb;--card:#fff;--accent:#0a84ff;--indigo:#5e5ce6;--green:#248a3d;--red:#d70015;--line:#e6e9f1}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans Arabic",-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.75;font-size:17px}
+body.en{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none;font-weight:600}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;font-size:19px}
+.brand svg{flex:none;border-radius:10px;box-shadow:0 2px 8px rgba(20,30,60,.12)}
+.lang{font-size:14px;font-weight:700}
+.hero{padding:22px 0 8px}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.25;margin:0 0 12px;letter-spacing:-.3px;text-wrap:balance}
+.hero p.lead{font-size:18px;color:var(--muted);margin:0 0 20px;max-width:60ch}
+.bar{height:8px;width:120px;border-radius:4px;background:linear-gradient(90deg,#34c759,var(--accent),var(--indigo));margin:0 0 22px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:14px;padding:13px 20px;font-size:16px;font-weight:800}
+.cta:hover{text-decoration:none;opacity:.92}
+.cta small{display:block;font-size:11px;font-weight:600;opacity:.8}
+.calc{background:var(--card);border-radius:20px;padding:22px;margin:26px 0;box-shadow:0 1px 2px rgba(20,30,60,.05),0 10px 30px -18px rgba(20,30,60,.3)}
+.calc h2{margin:0 0 4px;font-size:21px}
+.calc .hint{color:var(--soft);font-size:14px;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+label{display:block;font-size:13.5px;font-weight:700;color:var(--muted);margin-bottom:6px}
+input,select{width:100%;border:1.5px solid var(--line);background:#fafbfd;border-radius:12px;padding:12px 14px;font-size:17px;font-weight:700;color:var(--ink);font-family:inherit}
+.out{margin-top:18px;border-radius:16px;background:linear-gradient(135deg,#eef4ff,#f2f0ff);padding:18px;text-align:center}
+.out .lbl{font-size:13px;font-weight:700;color:var(--soft);letter-spacing:.3px}
+.out .val{font-size:clamp(30px,8vw,42px);font-weight:800;letter-spacing:-.5px;margin:4px 0 2px}
+.out .rng{font-size:14px;color:var(--muted);font-weight:600}
+.out .note{font-size:13px;color:var(--muted);margin-top:10px}
+.out .teaser{margin-top:14px;font-size:14.5px;font-weight:700}
+.disc{font-size:12.5px;color:var(--soft);margin-top:12px}
+article{background:var(--card);border-radius:20px;padding:24px 22px;margin:0 0 26px}
+article h2{font-size:22px;margin:22px 0 8px;line-height:1.35}
+article h2:first-child{margin-top:0}
+article p,article li{max-width:65ch;color:#2c2f36}
+article ul{padding-inline-start:22px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 26px}
+.feat{background:var(--card);border-radius:16px;padding:16px}
+.feat b{display:block;font-size:16px;margin-bottom:4px}
+.feat span{font-size:14px;color:var(--muted)}
+nav.more{margin:0 0 26px}
+nav.more h2{font-size:18px;margin:0 0 10px}
+nav.more ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+nav.more a{display:inline-block;background:var(--card);border-radius:12px;padding:9px 13px;font-size:14.5px}
+footer{color:var(--soft);font-size:13.5px;padding:10px 0 40px;border-top:1px solid var(--line);margin-top:10px}
+footer a{font-weight:600}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"القيمة العادلة","operatingSystem":"iOS","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"},"url":"https://apps.apple.com/sa/app/id6805596650","inLanguage":["ar","en"]}</script>
+</head>
+<body class="">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><svg width="38" height="38" viewBox="0 0 1024 1024" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1024" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f5f7fb"/><stop offset="1" stop-color="#e6eaf1"/></linearGradient><linearGradient id="lb" x1="150" y1="0" x2="874" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#34C759"/><stop offset=".5" stop-color="#0A84FF"/><stop offset="1" stop-color="#5E5CE6"/></linearGradient></defs><rect width="1024" height="1024" fill="url(#lg)"/><rect x="150" y="464" width="724" height="96" rx="48" fill="url(#lb)"/><circle cx="599" cy="512" r="78" fill="#fff" stroke="#0A84FF" stroke-width="18"/></svg><span>القيمة العادلة</span></a>
+    <a class="lang" href="en.html" hreflang="en">English</a>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>ما هو معدل الرسملة؟ شرح مبسط</h1>
+      <div class="bar"></div>
+      <p class="lead">معدل الرسملة هو العائد السنوي الذي يتوقعه المشتري من أصل يدرّ دخلاً. بفهمه تفهم لماذا يُباع مشروعان بنفس الدخل بسعرين مختلفين.</p>
+      <a class="cta" href="https://apps.apple.com/sa/app/id6805596650">حمّل التطبيق من App Store<small>مجاني · آيفون</small></a>
+    </section>
+    
+  <section class="calc" aria-labelledby="calc-h">
+    <h2 id="calc-h">احسب القيمة العادلة الآن</h2>
+    <p class="hint">أرقام شهرية تقريبية — النتيجة تقدير استرشادي فوري.</p>
+    <form id="fvcalc" onsubmit="return false">
+      <div class="grid">
+        <div><label for="rev">الإيرادات الشهرية (ريال)</label><input id="rev" inputmode="decimal" value="20000"></div>
+        <div><label for="cost">التكاليف الشهرية (ريال)</label><input id="cost" inputmode="decimal" value="8000"></div>
+        <div><label for="risk">مستوى المخاطرة</label><select id="risk"><option value="1">1 — بدون</option><option value="2">2 — منخفض جداً</option><option value="3" selected>3 — منخفض</option><option value="4">4 — متوسط</option><option value="5">5 — عالٍ</option><option value="6">6 — عالٍ جداً</option></select></div>
+        <div><label for="mgmt">جهد الإدارة</label><select id="mgmt"><option value="1">1 — بدون</option><option value="2">2 — منخفض جداً</option><option value="3" selected>3 — منخفض</option><option value="4">4 — متوسط</option><option value="5">5 — عالٍ</option><option value="6">6 — عالٍ جداً</option></select></div>
+        <div style="grid-column:1/-1"><label for="ask">السعر المطلوب (اختياري)</label><input id="ask" inputmode="decimal" value="" placeholder="—"></div>
+      </div>
+      <div class="out" aria-live="polite">
+        <div class="lbl">القيمة العادلة التقديرية</div>
+        <div class="val" id="val">—</div>
+        <div class="rng" id="rng"></div>
+        <div class="note" id="note"></div>
+        <div class="teaser" id="teaser"></div>
+        <p style="margin:14px 0 0"><a class="cta" href="https://apps.apple.com/sa/app/id6805596650">حمّل التطبيق من App Store<small>مجاني · آيفون</small></a></p>
+      </div>
+      <p class="disc">تقدير استرشادي مبني على أرقامك — ليس تقييماً معتمداً ولا نصيحة مالية. للتقييم المعتمد استعن بمقيّم مرخّص من الهيئة السعودية للمقيّمين المعتمدين (تقييم).</p>
+    </form>
+  </section>
+    <article>
+    <h2>المعادلة</h2>
+    <p><b>القيمة العادلة = صافي الدخل السنوي ÷ معدل الرسملة</b>. فإذا كان صافي الدخل ١٠٠ ألف ريال ومعدل الرسملة ١٠٪، فالقيمة نحو مليون ريال.</p>
+    <h2>لماذا يختلف المعدل؟</h2>
+    <ul><li><b>المخاطرة</b>: دخل غير مستقر = عائد مطلوب أعلى = سعر أقل.</li><li><b>جهد الإدارة</b>: مطعم يحتاج متابعة يومية يستحق عائداً أعلى من شقة مؤجرة.</li></ul>
+    <p>العقارات المستقرة غالباً بمعدلات منخفضة نسبياً، بينما الأنشطة التشغيلية الصغيرة بمعدلات أعلى.</p>
+    </article>
+    
+  <nav class="more" aria-label="أدلة أخرى"><h2>أدلة أخرى</h2><ul>
+    <li><a href="./">كم يساوي مشروعي؟</a></li><li><a href="taqbeel-mahal.html">تقبيل محل: هل السعر عادل؟</a></li><li><a href="taqyeem-maghsala.html">تقييم مغسلة</a></li><li><a href="taqyeem-salon.html">تقييم صالون</a></li><li><a href="taqyeem-cafe.html">تقييم كافيه</a></li><li><a href="siar-shaqqa.html">هل سعر الشقة عادل؟</a></li><li><a href="taqyeem-imtiyaz.html">تقييم امتياز تجاري</a></li>
+  </ul></nav>
+  </main>
+  <footer>
+    <a href="./">الرئيسية</a> · <a href="privacy.html">سياسة الخصوصية</a> · <a href="support.html">الدعم</a> · <a href="https://apps.apple.com/sa/app/id6805596650">App Store</a><br>
+    © 2026 القيمة العادلة · لا نجمع أي بيانات
+  </footer>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('fvcalc'); if(!f) return;
+  var ar=document.documentElement.lang==='ar';
+  function n(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)?v:0;}
+  function fmt(x){return 'SAR\u00A0'+Math.round(x).toLocaleString('en-US');}
+  function run(){
+    var rev=n('rev')*12, cost=n('cost')*12, r=n('risk')||3, m=n('mgmt')||3, ask=n('ask');
+    var nai=rev-cost, cr=0.04*Math.pow(12,((r-1)+(m-1))/10);
+    var val=document.getElementById('val'), rng=document.getElementById('rng'), note=document.getElementById('note'), tz=document.getElementById('teaser');
+    if(nai<=0){ val.textContent='—'; rng.textContent=ar?'التكاليف أعلى من الإيرادات':'Costs exceed revenue'; note.textContent=''; tz.textContent=''; return; }
+    val.textContent=fmt(nai/cr);
+    rng.textContent=(ar?'النطاق العادل: ':'Fair range: ')+fmt(nai/(cr*1.1))+' – '+fmt(nai/(cr*0.9));
+    note.textContent=(ar?'صافي الدخل السنوي ':'Net yearly income ')+fmt(nai)+(ar?' · العائد المستهدف ':' · target yield ')+(cr*100).toFixed(1)+'%';
+    tz.textContent= ask>0 ? (ar?'أدخلت سعراً مطلوباً. هل هو صفقة أم مبالغ فيه؟ التطبيق يعطيك الحكم ومدة الاسترداد والعائد خلال 5 سنوات.':'You entered an asking price. Bargain or overpriced? The app gives the verdict, payback period and 5-year return.') : '';
+  }
+  f.addEventListener('input',run); run();
+})();</script>
+</body>
+</html>
