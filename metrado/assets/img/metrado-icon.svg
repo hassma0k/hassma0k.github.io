@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Metrado — The Measured Edge (app icon master, light)</title>
+  <!--
+    SOURCE OF TRUTH. Hand-written on a 1024 grid; every key coordinate is a multiple of 8.
+    Full-bleed square, NO corner mask (iOS and Android apply their own).
+      measure line  y = 408  (39.8%: the optical centre sits above the geometric one)
+      band          y 408 → 664 (256 = 25%), bleeds off the left edge
+      vertex V      (792, 408), where the measure line ends
+      mitre         45° from V down-left to the bottom corner (536, 664), corner eased (12 px legs)
+      bead          centred on V, r = 80 (Ø160 = 15.6% → ≈6 px at a 40 px icon)
+    Visual mass (band + bead) centres at ≈ (420, 520): on the optical centre, weighted to the start side.
+    iOS safe box 100–924: V, the mitre and the bead (712–872 × 328–488) all sit inside it.
+  -->
+  <defs>
+    <linearGradient id="mi-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E5A7A"/>
+      <stop offset="0.6" stop-color="#0B4F6C"/>
+      <stop offset="1" stop-color="#083C53"/>
+    </linearGradient>
+    <radialGradient id="mi-lift" cx="360" cy="300" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mi-band" x1="0" y1="408" x2="0" y2="664" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FAF9F6"/>
+      <stop offset="1" stop-color="#ECE8DF"/>
+    </linearGradient>
+    <radialGradient id="mi-bead" cx="0.5" cy="0.5" r="0.5" fx="0.34" fy="0.3">
+      <stop offset="0" stop-color="#F6A869"/>
+      <stop offset="0.45" stop-color="#E8853F"/>
+      <stop offset="0.82" stop-color="#C9631F"/>
+      <stop offset="1" stop-color="#B4541A"/>
+    </radialGradient>
+    <filter id="mi-blur-band" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="mi-blur-bead" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <clipPath id="mi-band-clip">
+      <path d="M-16 408H792L548 652Q536 664 519 664H-16Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Layer 0 · ground: Harbor, 3 stops, soft top-left lift -->
+  <rect width="1024" height="1024" fill="url(#mi-ground)"/>
+  <rect width="1024" height="1024" fill="url(#mi-lift)"/>
+
+  <!-- Layer 1 · band: primer white, dead-straight top edge, 45° mitre -->
+  <path d="M-16 408H792L548 652Q536 664 519 664H-16Z" transform="translate(0 12)" fill="#04202E" opacity="0.30" filter="url(#mi-blur-band)"/>
+  <path d="M-16 408H792L548 652Q536 664 519 664H-16Z" fill="url(#mi-band)"/>
+  <rect x="-16" y="408" width="808" height="3" fill="#FFFFFF" clip-path="url(#mi-band-clip)"/>
+
+  <!-- Layer 2 · vertex bead: copper, key light top-left 45°, contact shadow on the band -->
+  <ellipse cx="800" cy="466" rx="69" ry="24" fill="#083C53" opacity="0.35" filter="url(#mi-blur-bead)"/>
+  <circle cx="792" cy="408" r="80" fill="url(#mi-bead)"/>
+  <ellipse cx="763" cy="375" rx="29" ry="17" transform="rotate(-35 763 375)" fill="#FFFFFF" opacity="0.55"/>
+</svg>
