@@ -394,3 +394,7 @@ body.demo { background: var(--surface-0); }
 .code-card .label { margin-bottom: var(--s-2); }
 .code-out { font-size: clamp(1.75rem, 1.2rem + 3vw, 2.75rem); font-weight: 800; letter-spacing: .08em; margin: 0 0 var(--s-4); overflow-wrap: anywhere; color: var(--primary); text-align: start; }
 .final .section-title, .final .ea-intro { max-width: none; }
+
+/* App Store buttons carry the app icon. */
+.btn-store { gap: var(--s-3); }
+.store-icon { width: 28px; height: 28px; border-radius: 7px; flex: none; display: block; }
