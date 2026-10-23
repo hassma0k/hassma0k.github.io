@@ -52,7 +52,7 @@
     if (dep && typeof dep === 'object') dep = str(dep.label, 60) ? str(dep.label, 60) + ': ' + str(dep.amount, 60) : str(dep.amount, 60);
     return {
       v: 1, lang: lang, dir: dir,
-      biz: { name: str(biz.name, 120), phone: str(biz.phone, 40), whatsapp: str(biz.whatsapp, 40), email: str(biz.email, 120), tierLine: str(biz.tierLine, 200) },
+      biz: { name: str(biz.name, 120), phone: str(biz.phone, 40), whatsapp: str(biz.whatsapp, 40), email: str(biz.email, 120), tierLine: str(biz.tierLine, 200).replace(/^\s+|\s+$/g, '') },
       doc: { number: str(doc.number, 60), date: str(doc.date, 60), validUntil: str(doc.validUntil, 60), verifyId: str(doc.verifyId, 64) },
       client: { name: str(client.name, 120) },
       title: str(o.title, 160),
@@ -123,7 +123,16 @@
     return out;
   }
 
-  root.MetradoViewer = { decodePayload: decodePayload, normalize: normalize, acceptMessage: acceptMessage, acceptLinks: acceptLinks, phoneDigits: phoneDigits };
+  // The lines under the business name, in order. A line that is empty or missing is left out entirely: no row, no separator.
+  function brandLines(biz) {
+    var contact = [biz.phone || biz.whatsapp, biz.email].filter(Boolean).join(' · ');
+    var out = [];
+    if (biz.tierLine) out.push({ cls: 'doc-contact', text: biz.tierLine });
+    if (contact) out.push({ cls: 'doc-contact num', text: contact });
+    return out;
+  }
+
+  root.MetradoViewer = { brandLines: brandLines, decodePayload: decodePayload, normalize: normalize, acceptMessage: acceptMessage, acceptLinks: acceptLinks, phoneDigits: phoneDigits };
 
   // ---------- DOM (browser only) ----------
   if (typeof document === 'undefined') return;
@@ -176,7 +185,6 @@
 
       var doc = el('div', { 'class': 'doc', lang: d.lang, dir: d.dir });
       var initials = d.biz.name.replace(/^\s+|\s+$/g, '').split(/\s+/).slice(0, 2).map(function (w) { return w.charAt(0); }).join('').toUpperCase() || 'M';
-      var contact = [d.biz.phone || d.biz.whatsapp, d.biz.email].filter(Boolean).join(' · ');
       var meta = el('dl', { 'class': 'doc-meta' });
       function metaRow(label, value, cls) {
         if (!value) return;
@@ -190,7 +198,7 @@
       var head = el('header', { 'class': 'doc-head' }, [
         el('div', { 'class': 'doc-brand' }, [
           tx('span', 'doc-logo', initials),
-          el('div', null, [tx('p', 'doc-co', d.biz.name), d.biz.tierLine ? tx('p', 'doc-contact', d.biz.tierLine) : null, contact ? tx('p', 'doc-contact num', contact) : null])
+          el('div', null, [tx('p', 'doc-co', d.biz.name)].concat(brandLines(d.biz).map(function (l) { return tx('p', l.cls, l.text); })))
         ]),
         tx('h1', 'doc-title', d.title || I.title),
         meta
