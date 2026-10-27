@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Verify a certificate — The CFO Game</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><style>body{font:16px/1.65 -apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:0 auto;padding:32px 20px 64px;color:#1a1d21;background:#fff}h1{font-size:26px;margin:0 0 4px}.muted{color:#6a7078;font-size:14px}a{color:#8a6d2f}hr{border:0;border-top:1px solid #e6e6ea;margin:28px 0}.card{border:2px solid #c9ac72;border-radius:14px;padding:20px 22px;margin-top:22px;background:#fcfaf5}.ok{color:#2c6a54;font-weight:800}.bad{color:#a8433f;font-weight:800}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px}.tile{background:#f6f2ea;border-radius:10px;padding:10px 12px}.tile b{display:block;font-size:11px;letter-spacing:.08em;color:#8a6d2f}.name{font:italic 700 28px/1.2 Georgia,serif;margin:6px 0 2px}.ar{direction:rtl;text-align:right}</style></head><body>
+<h1>Certificate verification</h1><p class="muted">The CFO Game · Performance Certificate</p>
+<div id="out" class="card"><p class="muted">Checking…</p></div>
+<hr>
+<p class="muted">A CFO Game Performance Certificate records the result of a completed run in The CFO Game, an educational corporate-finance simulation. It is <strong>not</strong> an accredited qualification. All companies and figures in the game are fictional. This page checks that the details in the link match the certificate ID; it does not store or send any data.</p>
+<p class="muted ar">شهادة الأداء من The CFO Game توثّق نتيجة جولة مكتملة في محاكاة تعليمية للمالية المؤسسية، وليست مؤهلاً معتمداً. هذه الصفحة تتحقق من تطابق البيانات مع رقم الشهادة ولا تحفظ أي بيانات.</p>
+<p class="muted"><a href="https://apps.apple.com/app/id6810646240">The CFO Game on the App Store</a> · <a href="https://hassma0k.github.io/cfo-game-legal/privacy.html">Privacy</a> · <a href="https://hassma0k.github.io/cfo-game-legal/terms.html">Terms</a></p>
+<script>
+// Must match src/engine/certificate.ts (KEY, field order, hash and alphabet).
+var KEY = 'cfo-game-cert-v1', A = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+function hash32(parts) { var h = 0x811c9dc5, s = parts.join('|'); for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); } return h >>> 0; }
+function certId(f) { var a = hash32(f), b = hash32(['b'].concat(f, [a])), o = ''; for (var i = 0; i < 5; i++) o += A[(a >>> (i * 5)) & 31]; o += '-'; for (i = 0; i < 5; i++) o += A[(b >>> (i * 5)) & 31]; return o; }
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+var q = new URLSearchParams(location.search), out = document.getElementById('out');
+var n = (q.get('n') || '').trim(), g = q.get('g') || '', e = q.get('e') || '', p = q.get('p') || '', r = q.get('r') || '', t = q.get('t') || '', d = q.get('d') || '', id = (q.get('id') || '').toUpperCase();
+if (!n || !id) {
+  out.innerHTML = '<p class="bad">No certificate details in this link.</p><p class="muted">Open the verification link printed on the certificate, or the one attached to the LinkedIn credential.</p>';
+} else if (certId([KEY, n, g, e, p, r, t, d]) === id) {
+  var ev = Number(e), when = d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
+  out.innerHTML = '<p class="ok">✓ Valid certificate</p><div class="name">' + esc(n) + '</div><p class="muted">completed a full ' + esc(t) + '-decision run as CFO · issued ' + esc(when) + '</p>' +
+    '<div class="grid"><div class="tile"><b>GRADE</b>' + esc(g) + '</div><div class="tile"><b>EVA CREATED</b>' + (ev >= 0 ? '+' : '−') + 'SAR ' + Math.abs(ev).toFixed(1) + 'M</div><div class="tile"><b>STANDING</b>Ahead of ~' + esc(p) + '% of simulated CFOs</div><div class="tile"><b>CAREER RANK</b>' + esc(r) + '</div></div>' +
+    '<p class="muted" style="margin-top:12px">Certificate ID ' + esc(id) + '</p>';
+} else {
+  out.innerHTML = '<p class="bad">✗ Not valid</p><p class="muted">The details in this link do not match certificate ID ' + esc(id) + '. The link may have been edited or copied incompletely.</p>';
+}
+</script>
+</body></html>

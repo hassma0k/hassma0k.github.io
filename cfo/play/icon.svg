@@ -1,0 +1,6 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CFO game">
+  <rect width="1024" height="1024" fill="#14181e"/>
+  <text x="512" y="512" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif" font-weight="800" font-size="300" letter-spacing="-14" fill="#ECEEF1">CFO</text>
+  <rect x="356" y="556" width="312" height="22" rx="11" fill="#C9AC72"/>
+  <text x="512" y="726" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Playfair Display', serif" font-style="italic" font-size="166" fill="#A3AAB4">game</text>
+</svg>
