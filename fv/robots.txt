@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hassma0k.github.io/fv/sitemap.xml
