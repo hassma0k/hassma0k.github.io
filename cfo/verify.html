@@ -17,7 +17,7 @@ if (!n || !id) {
   out.innerHTML = '<p class="bad">No certificate details in this link.</p><p class="muted">Open the verification link printed on the certificate, or the one attached to the LinkedIn credential.</p>';
 } else if (certId([KEY, n, g, e, p, r, t, d]) === id) {
   var ev = Number(e), when = d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
-  out.innerHTML = '<p class="ok">✓ Valid certificate</p><div class="name">' + esc(n) + '</div><p class="muted">completed a full ' + esc(t) + '-decision run as CFO · issued ' + esc(when) + '</p>' +
+  out.innerHTML = '<p class="ok">✓ Valid certificate</p><div class="name">' + esc(n) + '</div><p class="muted">completed a ' + esc(t) + '-decision run as CFO · issued ' + esc(when) + '</p>' +
     '<div class="grid"><div class="tile"><b>GRADE</b>' + esc(g) + '</div><div class="tile"><b>EVA CREATED</b>' + (ev >= 0 ? '+' : '−') + 'SAR ' + Math.abs(ev).toFixed(1) + 'M</div><div class="tile"><b>STANDING</b>Ahead of ~' + esc(p) + '% of simulated CFOs</div><div class="tile"><b>CAREER RANK</b>' + esc(r) + '</div></div>' +
     '<p class="muted" style="margin-top:12px">Certificate ID ' + esc(id) + '</p>';
 } else {
