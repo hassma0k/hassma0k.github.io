@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>شاليهات | صفحة حجز باسم شاليهك وكل حجوزاتك في مكان واحد</title>
+<meta name="description" content="شاليهات: صفحة حجز باسم شاليهك ورابط تشاركه مع عملائك. تقويم يمنع الحجز المزدوج، وطلبات توصلك على واتساب، وحساب للحارس وتقارير. ٣ أشهر مجاناً بدون بطاقة وبدون عمولة." data-en-content="Chalets: a booking page in your chalet's name and a link to share with your customers. A calendar that blocks double bookings, requests that reach you on WhatsApp, a guard account and reports. 3 months free, no card, no commission.">
+<link rel="canonical" href="https://hassma0k.github.io/chalets/">
+<meta name="apple-itunes-app" content="app-id=6808103808">
+<meta name="theme-color" content="#0f1012">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="شاليهات">
+<meta property="og:title" content="شاليهات | صفحة حجز باسم شاليهك وكل حجوزاتك في مكان واحد">
+<meta property="og:description" content="رابط حجز باسم شاليهك، وتقويم يمنع الحجز المزدوج، وطلبات توصلك على واتساب. ٣ أشهر مجاناً، بدون بطاقة وبدون عمولة.">
+<meta property="og:url" content="https://hassma0k.github.io/chalets/">
+<meta property="og:image" content="https://hassma0k.github.io/og.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="شاليهات">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="شاليهات | صفحة حجز باسم شاليهك">
+<meta name="twitter:description" content="رابط حجز باسم شاليهك، وتقويم يمنع الحجز المزدوج، وطلبات توصلك على واتساب. ٣ أشهر مجاناً، بدون بطاقة وبدون عمولة.">
+<meta name="twitter:image" content="https://hassma0k.github.io/og.png">
+
+<link rel="icon" href="../og.png" type="image/png">
+<link rel="apple-touch-icon" href="../og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"شاليهات","alternateName":"Chalets","applicationCategory":"BusinessApplication","operatingSystem":"iOS, Web","description":"صفحة حجز باسم شاليهك ورابط تشاركه مع عملائك، وتقويم يمنع الحجز المزدوج، وطلبات توصلك على واتساب، وحساب للحارس وتقارير.","inLanguage":["ar","en"],"url":"https://hassma0k.github.io/chalets/","image":"https://hassma0k.github.io/og.png","installUrl":"https://apps.apple.com/sa/app/id6808103808","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR","description":"تنزيل مجاني. ٣ أشهر مجاناً بكل المزايا، ثم اشتراك من داخل تطبيق الآيفون."}}</script>
+
+<script>
+/* set direction before first paint */
+(function(){var l='ar';try{var q=location.search.match(/[?&]lang=(ar|en)/);l=q?q[1]:(localStorage.getItem('chalets-lang')||'ar');}catch(e){}
+if(l!=='en')l='ar';var d=document.documentElement;d.lang=l;d.dir=l==='en'?'ltr':'rtl';d.className='js';})();
+</script>
+
+<style>
+:root{
+  --bg:#0f1012;--bg2:#141518;--card:#17181c;--card2:#1c1d22;
+  --line:rgba(224,201,143,.15);--line2:rgba(243,239,232,.08);
+  --gold:#c6a15b;--gold2:#e0c98f;--txt:#f3efe8;--mut:#aaa49a;--ok:#6faa7c;--bad:#d08a79;
+  --r:20px;--wrap:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--txt);font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,Arial,sans-serif;font-size:17px;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html[lang=en] body{line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;background:var(--gold2);color:#1a1408;padding:10px 16px;border-radius:10px;z-index:100;font-weight:700}
+.skip:focus{top:10px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(15,16,18,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line2)}
+.hdr .wrap{display:flex;align-items:center;gap:10px;height:64px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:22px;letter-spacing:0}
+.brand img{width:36px;height:36px;flex:none;border-radius:9px}
+.nav{display:none;margin-inline-start:18px;gap:4px}
+.nav a{padding:8px 12px;border-radius:10px;color:var(--mut);font-weight:500;font-size:15px}
+.nav a:hover{color:var(--txt)}
+.sp{flex:1}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg2)}
+.lang button{min-width:48px;height:34px;padding:0 10px;border-radius:999px;font-size:14px;font-weight:700;color:var(--mut)}
+.lang button[aria-pressed=true]{background:var(--gold2);color:#1a1408}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:14px;font-weight:800;font-size:18px;line-height:1.2;text-align:center;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1408;box-shadow:0 10px 30px -10px rgba(198,161,91,.55)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(198,161,91,.7)}
+.btn-line{border:1.5px solid rgba(224,201,143,.45);color:var(--gold2);background:rgba(224,201,143,.04)}
+.btn-line:hover{background:rgba(224,201,143,.1)}
+.btn-sm{min-height:42px;padding:0 16px;font-size:15px;border-radius:12px}
+.btn small{display:block;font-size:13px;font-weight:500;opacity:.8;margin-top:2px}
+.arr{width:18px;height:18px;flex:none}
+[dir=rtl] .arr{transform:scaleX(-1)}
+.hcta{display:none}
+
+/* hero */
+.hero{position:relative;padding:40px 0 56px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-10% -20% auto;height:90%;background:radial-gradient(60% 60% at 70% 20%,rgba(198,161,91,.20),transparent 70%),radial-gradient(40% 40% at 10% 60%,rgba(111,170,124,.07),transparent 70%);z-index:-1}
+.hero-g{display:grid;gap:44px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold2);font-weight:700;font-size:15px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(224,201,143,.05)}
+h1{font-size:clamp(33px,9.4vw,60px);line-height:1.3;font-weight:800;margin:20px 0 18px;letter-spacing:0}
+html[lang=en] h1{line-height:1.12;letter-spacing:-.01em}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,4.4vw,20px);color:#d9d4cb;max-width:34em}
+.doors{display:grid;gap:12px;margin:28px 0 14px}
+.doors .btn{width:100%}
+.note{font-size:14px;color:var(--mut);margin-top:2px}
+.ios-only{display:none}
+html.ios .ios-only{display:inline}html.ios .web-only{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:20px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;color:#d9d4cb;font-weight:500}
+.chip svg{width:18px;height:18px;color:var(--ok);flex:none}
+
+.duo{position:relative;height:430px;max-width:380px;margin-inline:auto;width:100%}
+.duo .phone{position:absolute}
+.duo .p1{width:210px;left:50%;top:0;margin-left:-58px;z-index:2}
+.duo .p2{width:176px;left:50%;top:50px;margin-left:-190px;opacity:.95;z-index:1;transform:rotate(-5deg)}
+.duo .p3{display:none}
+
+/* phone frame */
+.phone{width:min(100%,250px);padding:7px;border-radius:38px;background:linear-gradient(150deg,#45464c,#1b1c20 45%,#2b2c31);box-shadow:0 40px 70px -28px #000,0 0 0 1px rgba(255,255,255,.07),0 0 90px -30px rgba(198,161,91,.4)}
+.phone img{width:100%;height:auto;border-radius:31px;background:#111;aspect-ratio:640/1385}
+
+/* sections */
+section{padding:72px 0;position:relative}
+.alt{background:var(--bg2);border-block:1px solid var(--line2)}
+.kick{color:var(--gold);font-weight:800;font-size:15px;margin-bottom:10px;display:block}
+h2{font-size:clamp(28px,7.2vw,44px);line-height:1.35;font-weight:800;max-width:26em;letter-spacing:0}
+html[lang=en] h2{line-height:1.15;letter-spacing:-.01em}
+.sub{color:#cfc9bf;font-size:18px;max-width:38em;margin-top:14px}
+.head{margin-bottom:38px}
+
+/* honesty strip */
+.strip{padding:34px 0;border-block:1px solid var(--line2);background:var(--bg2)}
+.strip p{font-size:clamp(18px,4.6vw,22px);font-weight:500;max-width:38em;color:#e8e3da}
+.strip b{color:var(--gold2)}
+
+/* pain vs gain */
+.pg{display:grid;gap:14px;margin-bottom:14px}
+.cell{border-radius:var(--r);padding:20px 20px 20px;border:1px solid var(--line2);position:relative}
+.cell .tag{display:inline-block;font-size:13px;font-weight:700;margin-bottom:8px;padding:2px 10px;border-radius:999px}
+.cell p{font-size:18px;font-weight:500;line-height:1.6}
+.pain{background:#141416}
+.pain .tag{background:rgba(208,138,121,.12);color:var(--bad)}
+.pain p{color:#bdb7ad}
+.gain{background:linear-gradient(160deg,#1c2520,#171a19);border-color:rgba(111,170,124,.3)}
+.gain .tag{background:rgba(111,170,124,.14);color:var(--ok)}
+.pgrow{display:grid;gap:10px;margin-bottom:18px}
+.dn{display:none}
+.after{margin-top:30px;font-size:19px;color:#e6e0d6;max-width:36em}
+.after b{color:var(--gold2)}
+
+/* features */
+.feat{display:grid;gap:28px;align-items:center;padding:36px 0;border-top:1px solid var(--line2)}
+.feat:first-of-type{border-top:0;padding-top:6px}
+.fm{display:flex;justify-content:center}
+.fm .phone{width:min(76%,236px)}
+.ft .num{display:inline-flex;width:38px;height:38px;border-radius:12px;align-items:center;justify-content:center;background:rgba(198,161,91,.12);border:1px solid var(--line);color:var(--gold2);font-weight:800;margin-bottom:14px}
+h3{font-size:clamp(23px,5.8vw,31px);line-height:1.4;font-weight:800;margin-bottom:10px}
+html[lang=en] h3{line-height:1.2}
+.ft p{color:#d3cdc3;font-size:18px;max-width:30em}
+.pts{margin-top:14px;display:grid;gap:8px}
+.pts li{display:flex;gap:10px;align-items:flex-start;font-size:16.5px;color:#e6e0d6;font-weight:500}
+.pts svg{width:20px;height:20px;color:var(--ok);flex:none;margin-top:5px}
+
+/* steps */
+.steps{display:grid;gap:16px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px}
+.step .n{font-size:44px;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.step h3{font-size:23px}
+.step p{color:#cfc9bf;font-size:17px}
+.helpline{margin-top:24px;color:#d9d4cb;font-size:17px}
+.helpline a{color:var(--gold2);font-weight:700;border-bottom:1px solid rgba(224,201,143,.4)}
+
+/* plans */
+.plans{display:grid;gap:16px}
+.plan{background:var(--card);border:1px solid var(--line2);border-radius:24px;padding:28px 24px}
+.plan.free{border-color:rgba(224,201,143,.55);background:linear-gradient(165deg,#241f14,#17181c 60%);box-shadow:0 30px 60px -36px rgba(198,161,91,.55)}
+.pl{font-size:14px;font-weight:700;color:var(--gold2);margin-bottom:10px;display:block}
+.big{font-size:clamp(34px,9vw,46px);font-weight:800;line-height:1.15}
+.big small{font-size:18px;font-weight:500;color:var(--mut)}
+.plan p{color:#cfc9bf;margin-top:10px;font-size:16.5px}
+.plan .pts{margin-top:16px}
+.nocomm{margin-top:16px;border:1px solid rgba(111,170,124,.4);background:rgba(111,170,124,.08);border-radius:var(--r);padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
+.nocomm svg{width:28px;height:28px;color:var(--ok);flex:none;margin-top:3px}
+.nocomm b{display:block;font-size:20px;margin-bottom:2px}
+.nocomm span{color:#d3cdc3;font-size:16.5px}
+.fine{margin-top:18px;font-size:15px;color:var(--mut);max-width:44em}
+
+/* guests */
+.gst{display:grid;gap:36px;align-items:center}
+.pair{display:flex;justify-content:center;gap:14px}
+.pair .phone{width:44%;max-width:210px;padding:6px;border-radius:30px}
+.pair .phone img{border-radius:24px}
+.pair .phone:nth-child(2){margin-top:34px}
+.gbtns{display:grid;gap:12px;margin-top:26px}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--card);border:1px solid var(--line2);border-radius:16px;transition:border-color .2s}
+details[open]{border-color:var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:700;font-size:18px;line-height:1.5;min-height:60px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:12px;height:12px;border-inline-end:2.5px solid var(--gold2);border-bottom:2.5px solid var(--gold2);transform:rotate(45deg);margin-top:-5px;flex:none;transition:transform .25s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:5px}
+.ans{padding:0 20px 20px;color:#d3cdc3;font-size:17px;max-width:42em}
+.ans a{color:var(--gold2);border-bottom:1px solid rgba(224,201,143,.4)}
+
+/* final */
+.final{text-align:center;padding:84px 0 96px;background:radial-gradient(60% 80% at 50% 0%,rgba(198,161,91,.18),transparent 70%),var(--bg)}
+.final h2{margin-inline:auto}
+.final .sub{margin-inline:auto}
+.fbtn{display:grid;gap:12px;margin:30px auto 0;max-width:420px}
+.final .g{margin-top:22px;font-size:17px;color:#d9d4cb}
+.final .g a{color:var(--gold2);font-weight:700;border-bottom:1px solid rgba(224,201,143,.4)}
+
+footer{border-top:1px solid var(--line2);padding:34px 0 120px;color:var(--mut);font-size:15px}
+footer .wrap{display:grid;gap:18px}
+.fl{display:flex;flex-wrap:wrap;gap:6px 22px}
+.fl a{padding:6px 0;min-height:40px;display:inline-flex;align-items:center}
+.fl a:hover{color:var(--txt)}
+.disc{max-width:50em;font-size:14px}
+
+/* sticky mobile cta */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(15,16,18,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar .btn{width:100%;min-height:50px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.duo .p1{animation:fl 7s ease-in-out infinite}
+
+@media (min-width:760px){
+  body{font-size:18px}
+  .wrap{padding-inline:32px}
+  .nav{display:flex}.hcta{display:inline-flex}
+  .hero{padding:72px 0 88px}
+  .hero-g{grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+  .doors{grid-template-columns:auto auto;justify-content:start}
+  .doors .btn{width:auto;min-width:200px}
+  .duo{height:520px;max-width:none}
+  .duo .p1{width:224px;margin-left:-112px}
+  .duo .p2{width:166px;top:80px;margin-left:-222px}
+  .duo .p3{display:block;left:50%;width:166px;top:80px;margin-left:56px;transform:rotate(5deg);z-index:1}
+  section{padding:104px 0}
+  .strip{padding:44px 0}
+  .pgrow{grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+  .pg{margin-bottom:0}
+  .feat{grid-template-columns:1fr 1fr;gap:70px;padding:56px 0}
+  .feat:nth-of-type(even) .fm{order:2}
+  .fm .phone{width:min(100%,262px)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .plans{grid-template-columns:1.25fr 1fr 1fr;align-items:stretch}
+  .gst{grid-template-columns:1fr 1fr;gap:70px}
+  .gbtns{grid-template-columns:auto auto;justify-content:start}
+  .bar{display:none}
+  footer{padding-bottom:40px}
+}
+@media (max-width:370px){
+  .wrap{padding-inline:16px}
+  .brand{font-size:20px}
+  .btn{padding:0 18px;font-size:17px}
+  .lang button{min-width:42px;padding:0 8px}
+  .duo .p2{margin-left:-170px;width:160px}
+  .duo .p1{margin-left:-50px;width:196px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-en="Skip to content">انتقل إلى المحتوى</a>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="شاليهات" data-en-aria="Chalets">
+      <img src="img/icon.png" alt="" width="36" height="36">
+      <span data-en="Chalets">شاليهات</span>
+    </a>
+    <nav class="nav" aria-label="الأقسام" data-en-aria="Sections">
+      <a href="#features" data-en="Features">المزايا</a>
+      <a href="#plans" data-en="Pricing">الأسعار</a>
+      <a href="#guests" data-en="For guests">للضيوف</a>
+      <a href="#faq" data-en="FAQ">الأسئلة</a>
+    </nav>
+    <span class="sp"></span>
+    <div class="lang" role="group" aria-label="اللغة" data-en-aria="Language">
+      <button type="button" data-l="ar" aria-pressed="true" lang="ar">عربي</button>
+      <button type="button" data-l="en" aria-pressed="false" lang="en">English</button>
+    </div>
+    <a class="btn btn-gold btn-sm hcta js-owner" href="https://hassma0k.github.io/chalets-site/setup" data-en="Start free">ابدأ مجاناً</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-g">
+    <div>
+      <span class="eyebrow" data-en="For chalet and holiday-home owners">لأصحاب الشاليهات والاستراحات</span>
+      <h1 data-h data-en="A booking page in <em>your chalet's name</em>. All your bookings in one place.">صفحة حجز <em>باسم شاليهك</em>، وحجوزاتك كلها في مكان واحد</h1>
+      <p class="lead" data-en="Your own customers book from your link and the request lands on your WhatsApp. No double bookings, and no sending the same photos and prices again and again.">عملاؤك يحجزون من رابطك، والطلب يوصلك على واتساب. بدون حجز مزدوج، وبدون ما تعيد نفس الصور والأسعار لكل واحد.</p>
+      <div class="doors">
+        <a class="btn btn-gold js-owner" href="https://hassma0k.github.io/chalets-site/setup" id="doorOwner">
+          <span><span data-en="I own a chalet">عندي شاليه</span><small><span class="web-only" data-en="Start free in the browser">ابدأ مجاناً من المتصفح</span><span class="ios-only" data-en="Start free on the App Store">ابدأ مجاناً من App Store</span></small></span>
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-line" href="https://hassma0k.github.io/chalets-site/">
+          <span><span data-en="I want to book">أبغى أحجز</span><small data-en="No account needed">بدون حساب</small></span>
+        </a>
+      </div>
+      <p class="note" data-en="Owners: on iPhone you start from the App Store, on any other device from the browser.">للمالك: على الآيفون تبدأ من App Store، وعلى أي جهاز ثاني من المتصفح.</p>
+      <ul class="chips" aria-label="ملخص" data-en-aria="Summary">
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Works with WhatsApp">يشتغل مع واتساب</span></li>
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="3 months free, no card">٣ أشهر مجاناً بدون بطاقة</span></li>
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="No commission">بدون عمولة</span></li>
+      </ul>
+    </div>
+    <div class="duo" aria-hidden="false">
+      <figure class="phone p2"><img data-shot="05" src="img/05-ar.jpg" width="640" height="1385" alt="شاشة اليوم عند المالك: الحجوزات والطلبات" data-en-alt="The owner's Today screen: bookings and requests" fetchpriority="high"></figure>
+      <figure class="phone p1"><img data-shot="02" src="img/02-ar.jpg" width="640" height="1385" alt="صفحة الشاليه التي يراها العميل: صور وأسعار وزر الحجز" data-en-alt="The chalet page your customer sees: photos, prices and the book button" fetchpriority="high"></figure>
+      <figure class="phone p3"><img data-shot="07" src="img/07-ar.jpg" width="640" height="1385" alt="صورة التوفر الجاهزة للمشاركة" data-en-alt="A ready-to-share availability picture" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap rv"><p data-h data-en="Chalets is a <b>tool</b> for you and your customers. We do not promise you guests or sell you leads. But from day one it works with the people <b>you already know</b>.">شاليهات <b>أداة</b> لك ولعملائك. ما نعدك بضيوف من عندنا ولا نبيعك زبائن، لكن من أول يوم تشتغل بها مع الناس <b>اللي تعرفهم أنت</b>.</p></div>
+</div>
+
+<!-- PAIN vs GAIN -->
+<section id="owners">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kick" data-en="Sound familiar?">تعرف هالحالة؟</span>
+      <h2 data-en="Your bookings are scattered. They can sit in one place.">حجوزاتك مبعثرة، وتقدر تكون في مكان واحد</h2>
+      <p class="sub" data-en="One double booking costs you a customer, and often a good word about you. Here is what changes.">حجز مزدوج واحد يخسّرك عميل، وغالباً كلمة طيبة عنك. هذا اللي يتغيّر.</p>
+    </div>
+
+    <div class="pgrow rv">
+      <div class="cell pain"><span class="tag" data-en="Today">اليوم</span><p data-en="Booking requests are scattered across dozens of WhatsApp chats.">طلبات الحجز مبعثرة بين عشرات محادثات واتساب.</p></div>
+      <div class="cell gain"><span class="tag" data-en="With Chalets">مع شاليهات</span><p data-en="Every request and booking sits in one live calendar.">كل طلب وكل حجز في تقويم واحد مباشر.</p></div>
+    </div>
+    <div class="pgrow rv">
+      <div class="cell pain"><span class="tag" data-en="Today">اليوم</span><p data-en="You send the same photos, prices and rules again and again.">ترسل نفس الصور والأسعار والشروط لكل واحد من جديد.</p></div>
+      <div class="cell gain"><span class="tag" data-en="With Chalets">مع شاليهات</span><p data-en="Your customer opens your link and sees photos, prices and rules himself.">عميلك يفتح رابطك ويشوف الصور والأسعار والشروط بنفسه.</p></div>
+    </div>
+    <div class="pgrow rv">
+      <div class="cell pain"><span class="tag" data-en="Today">اليوم</span><p data-en="Two families show up for the same night.">عائلتين وصلوا على نفس الليلة.</p></div>
+      <div class="cell gain"><span class="tag" data-en="With Chalets">مع شاليهات</span><p data-en="The calendar blocks the booked time, cleaning time included. No one books over anyone.">التقويم يقفل الوقت المحجوز ومعه وقت التنظيف. ما أحد يحجز فوق أحد.</p></div>
+    </div>
+    <div class="pgrow rv">
+      <div class="cell pain"><span class="tag" data-en="Today">اليوم</span><p data-en="The guard calls to ask who is coming today.">الحارس يتصل يسأل: مين جاي اليوم؟</p></div>
+      <div class="cell gain"><span class="tag" data-en="With Chalets">مع شاليهات</span><p data-en="The guard opens his own account and sees today's bookings and the amount due.">الحارس يفتح حسابه ويشوف حجوزات اليوم والمبلغ المطلوب.</p></div>
+    </div>
+    <p class="after rv" data-h data-en="You keep WhatsApp. <b>Chalets just keeps the order for you.</b>">واتساب يبقى كما هو. <b>شاليهات بس يرتّب لك اللي حواليه.</b></p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="alt">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kick" data-en="What you get">وش تستفيد</span>
+      <h2 data-en="Everything an owner needs, in one app">كل اللي يحتاجه صاحب الشاليه في تطبيق واحد</h2>
+    </div>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="06" src="img/06-ar.jpg" width="640" height="1385" alt="الإعدادات: رابط الحجز لعملائك مع أزرار النسخ والمشاركة" data-en-alt="Settings: your booking link with copy and share buttons" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">1</span>
+        <h3 data-en="A page in your name, and a short link">صفحة باسمك ورابط قصير</h3>
+        <p data-en="Your chalet gets its own page with your name and logo, your photos, prices and rules. Copy the link and send it on WhatsApp or put it in your bio.">شاليهك له صفحة خاصة باسمك وشعارك: صورك وأسعارك وشروطك. تنسخ الرابط وترسله في واتساب أو تحطه في البايو.</p>
+        <ul class="pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Your customers see you, not a stranger's brand">عميلك يشوف اسمك أنت، مو علامة غريبة</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="05b" src="img/05b-ar.jpg" width="640" height="1385" alt="حجز سريع من رسالة أو صوت" data-en-alt="Quick booking from a message or voice" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">2</span>
+        <h3 data-en="A WhatsApp message or a voice note becomes a booking">رسالة واتساب أو صوت، وتصير حجز</h3>
+        <p data-en="A customer wrote or sent a voice note? Paste the message or say it out loud. The app pulls out the name, number, time and amount, and you review and confirm.">العميل كتب لك أو أرسل صوت؟ الصق الرسالة أو قلها بصوتك، والتطبيق يطلع الاسم والجوال والوقت والمبلغ، وأنت تراجع وتؤكد.</p>
+      </div>
+    </article>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="05" src="img/05-ar.jpg" width="640" height="1385" alt="التقويم المباشر وجدول اليوم" data-en-alt="The live calendar and today's timeline" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">3</span>
+        <h3 data-en="A live calendar that blocks double bookings">تقويم مباشر يمنع الحجز المزدوج</h3>
+        <p data-en="Every booking blocks its time the moment it is confirmed, plus the cleaning time you set. Day, evening, night, it is all on one timeline.">كل حجز يقفل وقته فور تأكيده، ومعه وقت التنظيف اللي تحدده. الصباح والمساء والليل كلها على جدول واحد.</p>
+        <ul class="pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Cleaning time is built in">وقت التنظيف داخل الحساب</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Block a day yourself whenever you want">تحجب أي يوم بنفسك متى ما تبي</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="04" src="img/04-ar.jpg" width="640" height="1385" alt="العميل يرسل طلبه للمالك على واتساب" data-en-alt="The customer sends the request to the owner on WhatsApp" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">4</span>
+        <h3 data-en="The request reaches you on WhatsApp">الطلب يوصلك على واتساب</h3>
+        <p data-en="Your customer sends the request in a ready-made WhatsApp message with all the details. You review, approve, and send the confirmation the way that suits you.">عميلك يرسل طلبه برسالة واتساب جاهزة فيها كل التفاصيل. أنت تراجع وتوافق، وترسل التأكيد بالطريقة اللي تناسبك.</p>
+        <ul class="pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Confirmation as text, a picture or a PDF">التأكيد نص أو صورة أو PDF</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Payment stays between you and your customer">الدفع بينك وبين عميلك مباشرة</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="07" src="img/07-ar.jpg" width="640" height="1385" alt="صورة التوفر الجاهزة للنشر" data-en-alt="An availability picture ready to post" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">5</span>
+        <h3 data-en="An availability picture for your Status and socials">صورة التوفّر لحالتك وسوشل ميديا</h3>
+        <p data-en="One tap makes a picture of your open days. Post it on your WhatsApp Status, Snapchat, Instagram or TikTok, and your customers see when you are free without asking.">بضغطة تطلع لك صورة بأيامك المتاحة. انشرها في حالة واتساب أو سناب أو انستقرام أو تيك توك، وعملاؤك يعرفون متى عندك فاضي بدون ما يسألون.</p>
+      </div>
+    </article>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="08" src="img/08-ar.jpg" width="640" height="1385" alt="حساب الحارس: جدول اليوم وزر الضيف غادر" data-en-alt="The guard account: today's schedule and the Guest left button" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">6</span>
+        <h3 data-en="An account for the guard">حساب للحارس</h3>
+        <p data-en="The guard sees today's bookings, the guest's number and the amount to collect. When the guest leaves, one tap on Guest left frees the unit.">الحارس يشوف حجوزات اليوم ورقم الضيف والمبلغ المطلوب تحصيله. وإذا طلع الضيف، يضغط «الضيف غادر» وتتحرر الوحدة.</p>
+        <ul class="pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="No more calls asking who is coming">ما عاد يتصل يسألك مين جاي</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feat rv">
+      <div class="fm"><figure class="phone"><img data-shot="09" src="img/09-ar.jpg" width="640" height="1385" alt="التقارير: الإيراد والإشغال وطرق الدفع" data-en-alt="Reports: revenue, occupancy and payment methods" loading="lazy"></figure></div>
+      <div class="ft">
+        <span class="num">7</span>
+        <h3 data-en="Reports and PDF invoices">تقارير وفواتير PDF</h3>
+        <p data-en="See your expected revenue, how full each unit is and how customers pay, and export a PDF invoice or report whenever you need one.">تشوف إيرادك المتوقع، وإشغال كل وحدة، وطرق دفع عملائك، وتطلّع فاتورة أو تقرير PDF وقت ما تحتاج.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kick" data-en="How it works for owners">كيف يشتغل للمالك</span>
+      <h2 data-en="Three steps, and you are taking bookings">ثلاث خطوات وتبدأ تستقبل حجوزات</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><h3 data-en="Create your page in minutes">جهّز صفحتك في دقائق</h3><p data-en="Add your chalet name, photos, prices and times. Not technical? We help you set it up.">اسم الشاليه والصور والأسعار والأوقات. ما تفهم في التقنية؟ نساعدك تجهّزها.</p></div>
+      <div class="step rv"><div class="n">2</div><h3 data-en="Send your link">أرسل رابطك</h3><p data-en="Copy your short link and send it to your customers on WhatsApp, or put it in your Instagram and TikTok bio.">انسخ رابطك القصير وأرسله لعملائك في واتساب، أو حطه في بايو انستقرام وتيك توك.</p></div>
+      <div class="step rv"><div class="n">3</div><h3 data-en="Run everything from your phone">دير كل شيء من جوالك</h3><p data-en="Requests, calendar, guard and reports, all in your hand. Requests reach you on WhatsApp.">الطلبات والتقويم والحارس والتقارير كلها في يدك. وتوصلك الطلبات على واتساب.</p></div>
+    </div>
+    <p class="helpline rv" data-h data-en="Stuck at any step? <a href='https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#support' rel='noopener'>Write to us</a> and we will walk you through it.">علقت في أي خطوة؟ <a href="https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#support" rel="noopener">راسلنا</a> ونمشّيك خطوة خطوة.</p>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans" class="alt">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kick" data-en="Pricing">الأسعار</span>
+      <h2 data-en="Try it for 3 months. All features, no card.">جرّبه ٣ أشهر بكل المزايا، بدون بطاقة</h2>
+      <p class="sub" data-en="If it does not fit your chalet, you have lost nothing.">إذا ما ناسب شاليهك، ما خسرت شيء.</p>
+    </div>
+    <div class="plans">
+      <div class="plan free rv">
+        <span class="pl" data-en="Start here">ابدأ من هنا</span>
+        <div class="big" data-en="Free for 3 months">٣ أشهر مجاناً</div>
+        <p data-en="Every feature is open from the first day. You do not enter a card.">كل المزايا مفتوحة من أول يوم، وما تدخل بطاقة.</p>
+        <ul class="pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Your page and short link">صفحتك ورابطك القصير</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Calendar, guard account and reports">التقويم وحساب الحارس والتقارير</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Availability pictures and PDF invoices">صور التوفّر وفواتير PDF</span></li>
+        </ul>
+      </div>
+      <div class="plan rv">
+        <span class="pl" data-en="After the trial, monthly">بعد التجربة، شهرياً</span>
+        <div class="big">150 <small data-en="SAR / month">ريال / شهر</small></div>
+        <p data-en="Billed monthly through the App Store. Cancel any time.">يتجدد شهرياً عبر App Store، وتلغيه متى ما تبي.</p>
+      </div>
+      <div class="plan rv">
+        <span class="pl" data-en="After the trial, yearly">بعد التجربة، سنوياً</span>
+        <div class="big">699 <small data-en="SAR for the first year">ريال للسنة الأولى</small></div>
+        <p data-en="Then 999 SAR per year. Through the App Store, cancel any time.">بعدها 999 ريال في السنة. عبر App Store، وتلغيه متى ما تبي.</p>
+      </div>
+    </div>
+    <div class="nocomm rv">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.5 3 3 5-6"/></svg>
+      <div><b data-en="No commission on your bookings, ever">صفر عمولة على حجوزاتك، دائماً</b><span data-en="The app takes no percentage and never touches your guests' money. Payment is between you and your customer.">التطبيق ما ياخذ نسبة، وما يلمس فلوس ضيوفك أبداً. الدفع بينك وبين عميلك.</span></div>
+    </div>
+    <p class="fine rv" data-en="Subscriptions are bought only inside the iPhone app, through the App Store. Prices are in Saudi riyals.">الاشتراك بعد التجربة يتم من تطبيق الآيفون فقط عبر App Store. الأسعار بالريال السعودي.</p>
+  </div>
+</section>
+
+<!-- GUESTS -->
+<section id="guests">
+  <div class="wrap gst">
+    <div class="rv">
+      <span class="kick" data-en="For guests">للضيوف</span>
+      <h2 data-en="Want to book? It takes seconds.">تبغى تحجز؟ بثواني</h2>
+      <p class="sub" data-en="Got a link from the chalet owner? Open it and book. No account, just your name and number.">جاك رابط من صاحب الشاليه؟ افتحه واحجز. بدون حساب، بس اسمك ورقمك.</p>
+      <ul class="pts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="See photos, prices and the policy before you book">تشوف الصور والأسعار والسياسة قبل لا تحجز</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="You pay the owner directly">تدفع للمالك مباشرة</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Your entry pass is in My bookings">بطاقة دخولك في «حجوزاتي»</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Free for guests">مجاني للضيوف</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-en="Works in the browser on any phone or computer, Android too">يشتغل من المتصفح على أي جوال أو كمبيوتر، حتى الأندرويد</span></li>
+      </ul>
+      <div class="gbtns">
+        <a class="btn btn-gold" href="https://hassma0k.github.io/chalets-site/"><span data-en="Open booking in the browser">افتح الحجز في المتصفح</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="https://apps.apple.com/sa/app/id6808103808" rel="noopener" data-en="iPhone app">تطبيق الآيفون</a>
+      </div>
+    </div>
+    <div class="pair rv">
+      <figure class="phone"><img data-shot="02" src="img/02-ar.jpg" width="640" height="1385" alt="صفحة الشاليه مع الصور والأسعار" data-en-alt="A chalet page with photos and prices" loading="lazy"></figure>
+      <figure class="phone"><img data-shot="03" src="img/03-ar.jpg" width="640" height="1385" alt="مراجعة الحجز: الاسم والجوال فقط" data-en-alt="Review your booking: just a name and a number" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kick" data-en="Questions">أسئلة</span>
+      <h2 data-en="Before you ask">قبل لا تسأل</h2>
+    </div>
+    <div class="faq rv">
+      <details><summary><span data-en="Is it a replacement for WhatsApp?">هل هو بديل عن واتساب؟</span></summary><div class="ans" data-en="No, it works with WhatsApp. The request reaches you on WhatsApp and you send the confirmation on WhatsApp. The app just puts in order what used to be scattered.">لا، يشتغل معه. الطلب يوصلك على واتساب، وتأكيدك ترسله على واتساب. التطبيق بس يرتّب لك اللي كان مبعثر.</div></details>
+      <details><summary><span data-en="Do you take a commission?">هل تاخذون عمولة؟</span></summary><div class="ans" data-en="No. The app takes no percentage of your bookings and never touches your guests' money. The only cost is the subscription after the free 3 months.">لا. التطبيق ما ياخذ أي نسبة من حجوزاتك وما يلمس فلوس ضيوفك. التكلفة الوحيدة هي الاشتراك بعد الأشهر الثلاثة المجانية.</div></details>
+      <details><summary><span data-en="I am not technical. Can I do it?">ما أفهم في التقنية، أقدر؟</span></summary><div class="ans" data-h data-en="Yes. Setting up your page takes a few simple steps and a few minutes. If you get stuck, we help you set it up: write to us from the <a href='https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#support' rel='noopener'>support page</a>.">إيه. تجهيز الصفحة خطوات بسيطة وتاخذ دقائق. وإذا علقت نساعدك تجهّزها: راسلنا من <a href="https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#support" rel="noopener">صفحة الدعم</a>.</div></details>
+      <details><summary><span data-en="I already list my chalet on another platform.">شاليهي معروض في منصة ثانية.</span></summary><div class="ans" data-en="Keep it there. Chalets is for your direct customers, the ones who know you and the ones you send your link to. You do not need to leave anything.">كمّل عليها. شاليهات لعملائك المباشرين: اللي يعرفونك واللي ترسل لهم رابطك. ما تحتاج تترك شيء.</div></details>
+      <details><summary><span data-en="How do guests pay?">كيف يدفع الضيف؟</span></summary><div class="ans" data-en="Directly to you, the way you agree on, such as cash or a transfer. The app does not collect payments and takes no part of the amount.">مباشرة لك، بالطريقة اللي تتفقون عليها، مثل الكاش أو التحويل. التطبيق ما يستلم مدفوعات وما ياخذ جزء من المبلغ.</div></details>
+      <details><summary><span data-en="Do guests need the app?">هل الضيف يحتاج التطبيق؟</span></summary><div class="ans" data-en="No. Guests book from the browser, with no account, using just a name and a number.">لا. الضيف يحجز من المتصفح بدون حساب، باسمه ورقمه بس.</div></details>
+      <details><summary><span data-en="Does it work on Android?">هل يشتغل على أندرويد؟</span></summary><div class="ans" data-en="Yes, in the browser on our website, for guests and for owners. There is no Android app yet.">نعم، من المتصفح في موقعنا، للضيف وللمالك. ما فيه تطبيق أندرويد حالياً.</div></details>
+      <details><summary><span data-en="What about the tourism licence?">وش بالنسبة للترخيص السياحي؟</span></summary><div class="ans" data-en="You can add your licence number to your page and guests will see it. You stay responsible for your own licensing. Chalets does not issue or approve licences.">تقدر تضيف رقم ترخيصك في صفحتك ويظهر للضيوف. وتبقى مسؤول عن تراخيصك أنت، وشاليهات ما يصدر ولا يعتمد تراخيص.</div></details>
+      <details><summary><span data-en="How much after the trial?">كم أدفع بعد التجربة؟</span></summary><div class="ans" data-en="150 SAR per month, or 699 SAR for the first year and then 999 SAR per year. You subscribe in the iPhone app through the App Store and can cancel any time.">150 ريال في الشهر، أو 699 ريال للسنة الأولى ثم 999 ريال في السنة. تشترك من تطبيق الآيفون عبر App Store وتلغي متى ما تبي.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="start">
+  <div class="wrap rv">
+    <span class="kick" data-en="Ready when you are">جاهز؟</span>
+    <h2 data-en="Give your chalet a page in its own name">خلّ لشاليهك صفحة باسمه</h2>
+    <p class="sub" data-en="3 months free with every feature. No card, no commission.">٣ أشهر مجاناً بكل المزايا. بدون بطاقة وبدون عمولة.</p>
+    <div class="fbtn">
+      <a class="btn btn-gold" href="https://apps.apple.com/sa/app/id6808103808" rel="noopener" data-en="Download on the App Store (iPhone)">حمّل من App Store (آيفون)</a>
+      <a class="btn btn-line" href="https://hassma0k.github.io/chalets-site/setup" data-en="Sign up from the browser">سجّل من المتصفح</a>
+    </div>
+    <p class="g" data-h data-en="Just want to book? <a href='https://hassma0k.github.io/chalets-site/'>Open booking</a>. Already an owner? <a href='https://hassma0k.github.io/chalets-site/staff-login'>Sign in</a>.">تبغى تحجز بس؟ <a href="https://hassma0k.github.io/chalets-site/">افتح الحجز</a>. صاحب شاليه عندك حساب؟ <a href="https://hassma0k.github.io/chalets-site/staff-login">تسجيل الدخول</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/icon.png" alt="" width="56" height="56" style="display:block;border-radius:13px;margin:0 auto 14px">
+    <nav class="fl" aria-label="روابط" data-en-aria="Links">
+      <a href="https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#privacy" rel="noopener" data-en="Privacy">الخصوصية</a>
+      <a href="https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#terms" rel="noopener" data-en="Terms">الشروط</a>
+      <a href="https://claude.ai/code/artifact/02b6c7a4-07dc-4303-a3a3-505ebf3331a6#support" rel="noopener" data-en="Support">الدعم</a>
+      <a href="https://hassma0k.github.io/chalets-site/staff-login" data-en="Owner sign in">دخول المالك</a>
+    </nav>
+    <p class="disc" data-en="Chalets is a booking-management tool. Agreements and payments are between the owner and the guest, and each owner is responsible for their own licensing. Sample chalet pictures in the screens are illustrations.">شاليهات أداة لإدارة الحجوزات. الاتفاق والدفع يكونون بين المالك والضيف، وكل مالك مسؤول عن تراخيصه. صور الشاليهات في الشاشات أمثلة توضيحية.</p>
+    <p data-en="© 2026 Chalets">© 2026 شاليهات</p>
+  </div>
+</footer>
+
+<div class="bar" id="bar" aria-hidden="true">
+  <a class="btn btn-gold js-owner" href="https://hassma0k.github.io/chalets-site/setup" tabindex="-1" id="barBtn" data-en="I own a chalet: start free">عندي شاليه: ابدأ مجاناً</a>
+</div>
+
+<script>
+(function(){
+var APP='https://apps.apple.com/sa/app/id6808103808',WEB='https://hassma0k.github.io/chalets-site/setup';
+var root=document.documentElement,KEY='chalets-lang';
+var ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+if(ios){root.classList.add('ios');[].forEach.call(document.querySelectorAll('.js-owner'),function(a){a.href=APP;a.rel='noopener';});}
+
+function each(sel,fn){[].forEach.call(document.querySelectorAll(sel),fn);}
+function apply(l){
+  var en=l==='en';
+  root.lang=l;root.dir=en?'ltr':'rtl';
+  each('[data-en]',function(el){
+    var h=el.hasAttribute('data-h');
+    if(el.__ar===undefined)el.__ar=h?el.innerHTML:el.textContent;
+    var v=en?el.getAttribute('data-en'):el.__ar;
+    if(h)el.innerHTML=v;else el.textContent=v;
+  });
+  each('[data-en-alt]',function(el){if(el.__a===undefined)el.__a=el.getAttribute('alt');el.setAttribute('alt',en?el.getAttribute('data-en-alt'):el.__a);});
+  each('[data-en-aria]',function(el){if(el.__l===undefined)el.__l=el.getAttribute('aria-label');el.setAttribute('aria-label',en?el.getAttribute('data-en-aria'):el.__l);});
+  each('img[data-shot]',function(im){im.src='img/'+im.getAttribute('data-shot')+'-'+l+'.jpg';});
+  var m=document.querySelector('meta[name=description]');
+  if(m){if(m.__d===undefined)m.__d=m.getAttribute('content');m.setAttribute('content',en?m.getAttribute('data-en-content'):m.__d);}
+  document.title=en?'Chalets | A booking page in your chalet’s name, all your bookings in one place':'شاليهات | صفحة حجز باسم شاليهك وكل حجوزاتك في مكان واحد';
+  each('.lang button',function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===l?'true':'false');});
+}
+var cur=root.lang==='en'?'en':'ar';
+if(cur==='en')apply('en');
+each('.lang button',function(b){b.addEventListener('click',function(){
+  var l=b.getAttribute('data-l');if(l===cur)return;cur=l;apply(l);
+  try{localStorage.setItem(KEY,l);}catch(e){}
+});});
+
+/* reveal on scroll + sticky bar */
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px',threshold:.08});
+  [].forEach.call(rv,function(el){io.observe(el);});
+}else{[].forEach.call(rv,function(el){el.classList.add('in');});}
+var bar=document.getElementById('bar'),btn=document.getElementById('barBtn'),hero=document.getElementById('top'),fin=document.getElementById('start');
+if(bar&&'IntersectionObserver' in window){
+  var heroOut=false,finIn=false;
+  function upd(){var on=heroOut&&!finIn;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',on?'false':'true');btn.tabIndex=on?0:-1;}
+  new IntersectionObserver(function(e){heroOut=!e[0].isIntersecting;upd();},{threshold:0}).observe(hero);
+  new IntersectionObserver(function(e){finIn=e[0].isIntersecting;upd();},{threshold:.1}).observe(fin);
+}
+})();
+</script>
+</body>
+</html>

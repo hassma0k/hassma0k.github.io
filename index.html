@@ -17,12 +17,13 @@
 <link rel="icon" href="og.png">
 <script>
   // Short booking links: hassma0k.github.io/?c=<code>  ->  the chalet's page on the booking website.
-  var c = (new URLSearchParams(location.search).get('c') || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
-  location.replace('/chalets-site/' + (c ? 'c/' + c : ''));
+  var q = new URLSearchParams(location.search), clean = function (v) { return (v || '').replace(/[^a-z0-9]/gi, '').toLowerCase(); };
+  var c = clean(q.get('c')), b = clean(q.get('b'));   // ?b=<code> opens the guest's My bookings page
+  location.replace(b ? '/chalets-site/c/' + b + '/bookings' : c ? '/chalets-site/c/' + c : '/chalets/');
 </script>
 <style>body{margin:0;background:#0f1012;color:#e9e6df;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center}a{color:#e9c46a;font-weight:700}</style>
 </head>
 <body>
-<p>جارٍ فتح صفحة الحجز…<br><br><a href="/chalets-site/">اضغط هنا إذا لم تُفتح الصفحة</a></p>
+<p>جارٍ فتح صفحة الحجز…<br><br><a href="/chalets/">اضغط هنا إذا لم تُفتح الصفحة</a></p>
 </body>
 </html>
