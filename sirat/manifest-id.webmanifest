@@ -1,0 +1,30 @@
+{
+  "name": "Sirat: The One Path",
+  "short_name": "Sirat",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "/sirat/id/",
+  "scope": "/sirat/",
+  "display": "standalone",
+  "background_color": "#F4EEE3",
+  "theme_color": "#F4EEE3",
+  "description": "Pilih sebuah pertanyaan. Aplikasi ini berbincang dengan Anda dari Al-Quran, dengan Taurat, Zabur, dan Injil di sampingnya. Kesimpulannya milik Anda.",
+  "icons": [
+    {
+      "src": "/sirat/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sirat/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sirat/assets/img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

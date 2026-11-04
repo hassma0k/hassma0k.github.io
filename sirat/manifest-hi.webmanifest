@@ -1,0 +1,30 @@
+{
+  "name": "Sirat: The One Path",
+  "short_name": "Sirat",
+  "lang": "hi",
+  "dir": "ltr",
+  "start_url": "/sirat/hi/",
+  "scope": "/sirat/",
+  "display": "standalone",
+  "background_color": "#F4EEE3",
+  "theme_color": "#F4EEE3",
+  "description": "एक सवाल चुनिए। यह ऐप क़ुरआन से आपसे बात करता है, साथ में तौरात, ज़बूर और इंजील। नतीजा आपका है।",
+  "icons": [
+    {
+      "src": "/sirat/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sirat/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sirat/assets/img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
