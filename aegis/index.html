@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Aegis Grid: Maze Tower Defense Strategy for iPhone and iPad</title>
+  <meta name="description" content="Build the maze. Break the swarm. Aegis Grid is a neon maze tower defense for iPhone and iPad: every wall rewrites the enemy path, six turrets with Tier-4 specialisations, 15 logic puzzles and a coach after every wave. No ads, no energy, plays offline." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#070b18" />
+  <link rel="canonical" href="https://hassma0k.github.io/aegis/" />
+  <link rel="alternate" hreflang="en" href="https://hassma0k.github.io/aegis/" />
+  <link rel="alternate" hreflang="ar" href="https://hassma0k.github.io/aegis/ar/" />
+  <link rel="alternate" hreflang="x-default" href="https://hassma0k.github.io/aegis/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aegis Grid" />
+  <meta property="og:title" content="Aegis Grid: Build the maze. Break the swarm." />
+  <meta property="og:description" content="Neon maze tower defense for iPhone and iPad. Every wall rewrites the enemy path. No ads, no energy, plays offline." />
+  <meta property="og:url" content="https://hassma0k.github.io/aegis/" />
+  <meta property="og:image" content="https://hassma0k.github.io/aegis/og-en.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aegis Grid: Build the maze. Break the swarm." />
+  <meta name="twitter:description" content="Neon maze tower defense for iPhone and iPad. No ads, no energy, plays offline." />
+  <meta name="twitter:image" content="https://hassma0k.github.io/aegis/og-en.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap" />
+  <link rel="preload" as="image" href="img/battle-phone.webp" type="image/webp" />
+  <link rel="stylesheet" href="landing.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Aegis Grid","alternateName":"Aegis Grid: Maze Tower Defense Strategy","url":"https://hassma0k.github.io/aegis/","image":"https://hassma0k.github.io/aegis/icon-512.png","description":"Neon maze tower defense for iPhone and iPad. Every wall rewrites the enemy path. No ads, no energy, plays offline.","genre":["Strategy","Tower defense","Puzzle"],"inLanguage":["en","ar","ja","ko","zh-Hans","zh-Hant","de","fr","es","pt-BR","ru","it","tr"],"gamePlatform":["iOS","Web browser"],"applicationCategory":"Game","operatingSystem":"iOS 15+","playMode":"SinglePlayer","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-path" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 10h26a6 6 0 0 1 0 12H14a6 6 0 0 0 0 12h26"/><circle cx="8" cy="10" r="3.5" fill="currentColor"/><path fill="currentColor" d="M40 28l5 6-5 6z"/></symbol>
+    <symbol id="i-turret" viewBox="0 0 48 48"><rect x="9" y="14" width="30" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="27" r="6" fill="currentColor"/><path d="M24 21V6M19 6h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M24 8v32M24 14c-5-6-14-2-13 5-5 3-3 11 3 11 1 6 9 8 10 3M24 14c5-6 14-2 13 5 5 3 3 11-3 11-1 6-9 8-10 3"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M7 20h34M16 5v9M32 5v9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path fill="currentColor" d="M24 25l2.6 5.2 5.7.8-4.1 4 1 5.7-5.2-2.7-5.2 2.7 1-5.7-4.1-4 5.7-.8z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" d="M24 5l15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11z"/><path fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" d="M17 24l5 5 9-10"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" d="M6 36 4 14l12 10L24 8l8 16 12-10-2 22z"/><path fill="currentColor" d="M9 40h30v4H9z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" d="M3 24C9 14 16 10 24 10s15 4 21 14c-6 10-13 14-21 14S9 34 3 24z"/><circle cx="24" cy="24" r="6.5" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="icon-64.png" alt="" width="36" height="36" /> Aegis Grid</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#features">Features</a><a href="#how">How it works</a><a href="#modes">Modes</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="lang" href="ar/" lang="ar" hreflang="ar">العربية</a>
+    <a class="btn btn-primary btn-sm" href="play/">Play now</a>
+  </div>
+</header>
+
+<div class="langbar" id="langbar" data-want="ar" role="region" aria-label="Language">
+  <div class="wrap">
+    <span lang="ar" dir="rtl">هذه الصفحة متوفرة بالعربية.</span>
+    <a href="ar/" lang="ar" hreflang="ar">العربية</a>
+    <button type="button" aria-label="Dismiss">Dismiss</button>
+  </div>
+</div>
+
+<main id="main">
+<div id="top"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <img class="hero-icon" src="icon-128.png" alt="Aegis Grid app icon: a glowing cyan shield on a dark grid" width="104" height="104" />
+      <p class="sub">Maze Tower Defense Strategy</p>
+      <h1><span class="g">Build the maze.</span><span class="m">Break the swarm.</span></h1>
+      <p class="lead">Every wall you place rewrites the path the enemy must walk, and you watch it happen live. Stretch the road, stack six kinds of turret, and learn real strategy while you play. For iPhone and iPad.</p>
+      <div class="cta">
+        <span class="store-soon">Coming soon to the App Store</span>
+        <a class="btn btn-ghost" href="play/">Play in your browser</a>
+      </div>
+      <p class="cta-note">Free to download. No account needed.</p>
+      <ul class="chips">
+        <li>No ads</li><li>No energy timers</li><li>Plays offline</li><li>All speeds free</li>
+      </ul>
+    </div>
+    <div class="phone">
+      <img src="img/battle-phone.webp" width="560" height="1214" fetchpriority="high" alt="Aegis Grid mid-wave on iPhone: a serpentine maze of barricades and glowing turrets, with a dashed magenta path and dozens of enemies marching toward the core" />
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="demo-sec" aria-labelledby="demo-h">
+  <div class="wrap">
+    <div class="stage">
+      <canvas id="demo" role="img" aria-label="Animated demo: walls are placed one by one, the enemy path grows from 9 tiles to more than 50, and turrets in the walls shoot the marching enemies."></canvas>
+      <div class="demo-chip" id="demo-chip">Path <b id="demo-len">9</b> tiles</div>
+    </div>
+    <div>
+      <span class="eyebrow">See the idea in 15 seconds</span>
+      <h2 id="demo-h">Walls don't block. They rewrite the road.</h2>
+      <p class="lead" style="margin-top:18px">Enemies always find the shortest way to your core, so you can never seal it off. Instead you bend their path again and again, and every extra tile is more time under your guns.</p>
+      <ul class="ticks">
+        <li><strong>Live path preview.</strong> See the exact route, and how many tiles each wall adds, before you commit.</li>
+        <li><strong>Turrets are walls too.</strong> Build the maze out of your defences and cover every corridor.</li>
+        <li><strong>Always legal.</strong> The game refuses any placement that would close the last gap, with a clear warning.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="features" aria-labelledby="feat-h">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Features</span>
+      <h2 id="feat-h">Easy to read. Deep to master.</h2>
+    </div>
+    <div class="grid c3">
+      <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-path"/></svg><h3>Every wall rewrites the path</h3><p>Ground enemies follow the shortest route, live. Drop a barricade and the glowing path bends. Longer path, longer fight.</p></article>
+      <article class="card"><svg class="ico m" aria-hidden="true"><use href="#i-turret"/></svg><h3>Six turrets, real synergies</h3><p>Vulcan, Cryo, Railgun, Tesla, Mortar and Harvester. Chill then shock, bunch enemies for a mortar, and pick a Tier-4 specialisation for the ones that matter.</p></article>
+      <article class="card"><svg class="ico a" aria-hidden="true"><use href="#i-brain"/></svg><h3>Learn real strategy</h3><p>15 hand-made logic puzzles teach one idea each, and a coach reads your wave report and tells you what to fix.</p></article>
+      <article class="card"><svg class="ico b" aria-hidden="true"><use href="#i-cal"/></svg><h3>Daily seed, and your friends</h3><p>Everyone plays the same Daily Protocol map. Or send a code to a friend, play the same waves, and see who scores higher.</p></article>
+      <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><h3>Fair by design</h3><p>No ads. No energy. No timers. Every game speed is free. Plays offline. Unlocks are one-time purchases, never subscriptions.</p></article>
+      <article class="card"><svg class="ico a" aria-hidden="true"><use href="#i-crown"/></svg><h3>Six Commanders to lead with</h3><p>Pick one hero per run: Rook, Wrench and Frost are earned by playing, Volt, Lancer and Atlas are optional extras. Each has an attack, a power aura for nearby turrets and a big ability. Different play styles, never stronger. Daily and Friend Challenges always use Rook, so scores stay fair.</p></article>
+      <article class="card"><svg class="ico m" aria-hidden="true"><use href="#i-eye"/></svg><h3>Built for clarity</h3><p>Each enemy has its own shape, so you can read the board at a glance and in any colour vision. 8 languages, including full right-to-left Arabic.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" aria-labelledby="gal-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Screenshots</span>
+      <h2 id="gal-h">Made for your thumb. Roomy on iPad.</h2>
+    </div>
+    <div class="gal-rows">
+      <div>
+        <p class="gal-label">iPhone</p>
+        <div class="scroller ph" tabindex="0" role="group" aria-label="iPhone screenshots, scroll sideways">
+          <figure class="shot"><img src="img/battle-phone.webp" width="560" height="1214" loading="lazy" alt="Mid-wave on iPhone: a serpentine maze full of enemies and turret fire" /><figcaption><b>Mid-wave</b>Watch your maze work</figcaption></figure>
+          <figure class="shot"><img src="img/t4-phone.webp" width="560" height="1214" loading="lazy" alt="The Tier-4 choice sheet for a Vulcan: Gatling Shredder or Ricochet Flak" /><figcaption><b>Tier-4 choice</b>Two paths, one commitment</figcaption></figure>
+          <figure class="shot"><img src="img/coach-phone.webp" width="560" height="1214" loading="lazy" alt="The wave report drawer: path length, mastery score, and damage, kills and return on investment for every turret, with a damage heatmap on the board" /><figcaption><b>Wave report</b>Damage, ROI and heatmap</figcaption></figure>
+          <figure class="shot"><img src="img/puzzle-phone.webp" width="560" height="1214" loading="lazy" alt="Academy puzzle Longer Road: three Vulcans placed to stop eight enemies with zero leaks on a budget of 90 scrap" /><figcaption><b>Academy</b>One idea per puzzle</figcaption></figure>
+          <figure class="shot"><img src="img/campaign-phone.webp" width="560" height="1214" loading="lazy" alt="Campaign screen with Easy, Normal and Hard difficulty and the sector list" /><figcaption><b>Campaign</b>Five sectors, three difficulties</figcaption></figure>
+          <figure class="shot"><img src="img/home-phone.webp" width="560" height="1214" loading="lazy" alt="The Aegis Grid home screen with Continue, Campaign, Academy, Daily Protocol and Challenge a Friend" /><figcaption><b>Home</b>Everything one tap away</figcaption></figure>
+        </div>
+      </div>
+      <div>
+        <p class="gal-label">iPad</p>
+        <div class="scroller pd" tabindex="0" role="group" aria-label="iPad screenshots, scroll sideways">
+          <figure class="shot"><img src="img/battle-pad.webp" width="1200" height="900" loading="lazy" alt="Aegis Grid on iPad in landscape: the full maze on the left and a sidebar with the next wave, build palette and live damage chart on the right" /><figcaption><b>Landscape command deck</b>Board left, live damage chart right</figcaption></figure>
+          <figure class="shot"><img src="img/t4-pad.webp" width="1200" height="900" loading="lazy" alt="iPad inspector for a Tier-3 turret with the two Tier-4 specialisations shown inline in the sidebar" /><figcaption><b>Inline inspector</b>No sheets covering the board</figcaption></figure>
+          <figure class="shot"><img src="img/home-pad.webp" width="1200" height="900" loading="lazy" alt="The Aegis Grid home screen on iPad" /><figcaption><b>Home on iPad</b>Same game, more room</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-h">Three steps. A hundred ways to play them.</h2>
+    </div>
+    <ol class="steps">
+      <li class="card step"><span class="tag">Recon</span><h3>Read the wave</h3><p>Before every wave you see exactly what is coming, from Runners to armoured Breakers and flying Drones, and the glowing path from each portal to your core.</p></li>
+      <li class="card step"><span class="tag">Build the maze</span><h3>Bend the road</h3><p>Place barricades and turrets. A ghost preview shows the new path, the tiles gained and the cost before you confirm, so no fat-finger losses.</p></li>
+      <li class="card step"><span class="tag">Engage &amp; learn</span><h3>Fight, then review</h3><p>Hit Engage, speed it up to 4x if you like, then open the wave report. Per-turret damage, kills and return, a heatmap, and a one-line coach tip.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="learn" id="learn" aria-labelledby="learn-h">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Academy and coach</span>
+      <h2 id="learn-h">A tower defense that teaches you to think.</h2>
+      <p class="lead" style="margin-top:18px">The Academy is 15 hand-made puzzles. Each has a fixed map and budget, and the obvious answer fails. You have to find the idea: buy time cheaply, use the rocks, match the tool to the problem. Then a short "Why it worked" card names it.</p>
+      <p class="lead">In the campaign, a coach reads your telemetry after every wave: how much damage armour ate, which turret earns the least, whether your path is long enough.</p>
+      <div class="quote">Example: if armour ate over a third of your kinetic damage, the coach points you to Strongest targeting or a Railgun.<small>One short, rule-based tip per wave, so advice stays specific.</small></div>
+    </div>
+    <div class="learn-shots">
+      <div class="phone"><img src="img/puzzle-phone.webp" width="560" height="1214" loading="lazy" alt="Academy puzzle in progress with the objective banner: stop every enemy, zero leaks, budget 90 scrap" /></div>
+      <div class="phone"><img src="img/coach-phone.webp" width="560" height="1214" loading="lazy" alt="Wave report drawer with per-turret damage and return on investment" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="modes" aria-labelledby="modes-h">
+  <div class="wrap" style="display:block">
+    <div class="sec-head center">
+      <span class="eyebrow">Modes</span>
+      <h2 id="modes-h">Pick how you want to play.</h2>
+    </div>
+    <div class="grid c4">
+      <article class="card"><h3>Campaign</h3><p>Five hand-built sectors on Easy, Normal or Hard. Hard has no retries and is truly hard. Earn Blueprints, even from defeats, and spend them in the Workshop.</p></article>
+      <article class="card"><h3>Academy</h3><p>15 logic puzzles in three rows: Basics, Synergy, Mastery. Zero leaks to pass, with stars for efficiency.</p></article>
+      <article class="card"><h3>Daily Protocol</h3><p>One map and one set of doctrines for everyone, every day. Chase a better score and compare on the leaderboard.</p></article>
+      <article class="card"><h3>Friend Challenge</h3><p>Create a code, share the link, and your friend plays the exact same map and waves. Highest score wins.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="fair" aria-labelledby="fair-h">
+  <div class="wrap">
+    <div class="fair-box">
+      <span class="eyebrow">Fair by design</span>
+      <h2 id="fair-h">Your time. Your thumb. Your call.</h2>
+      <ul class="fair-list">
+        <li>No ads</li><li>No energy</li><li>Plays offline</li><li>All speeds free</li><li>One-time unlocks</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="price" aria-labelledby="price-h">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Free to start, pay once</span>
+      <h2 id="price-h">One-time unlocks. No subscriptions. Ever.</h2>
+    </div>
+    <div class="price">
+      <article class="card tier"><h3>Free</h3><div class="amt">$0</div><ul><li>Sectors 1 and 2, all difficulties</li><li>Academy puzzles 1 to 6</li><li>Commanders Rook, Wrench and Frost (earned in play)</li><li>Daily Protocol and Friend Challenges</li><li>Workshop and 1x to 4x speed</li></ul></article>
+      <article class="card tier"><h3>Full Version</h3><div class="amt">$4.99<small>one time</small></div><ul><li>Sectors 3 to 5</li><li>Academy puzzles 7 to 15</li><li>Endless mode</li><li>Sandbox</li></ul></article>
+      <article class="card tier best"><span class="badge">Best value: everything</span><h3>Founder's Pack</h3><div class="amt">$14.99<small>one time <s>value $21.94</s></small></div><ul><li>Full Version</li><li>All 3 premium Commanders</li><li>2x Blueprints</li><li>3 colour themes</li><li>Founder badge on leaderboards</li></ul></article>
+      <article class="card tier"><h3>Commanders</h3><div class="amt">$2.99<small>each: Volt, Lancer, Atlas</small></div><ul><li>All three together for $5.99</li><li>Side-grades, not upgrades: same power, different play style</li></ul></article>
+      <article class="card tier"><h3>Double Blueprints</h3><div class="amt">$3.99<small>one time</small></div><ul><li>Workshop progress twice as fast</li><li>Never affects leaderboards or challenges</li></ul></article>
+    </div>
+    <p class="note center">Prices shown in US dollars. The App Store shows your local price. Purchases are non-consumable, handled by Apple, and can be restored.</p>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">FAQ</span><h2 id="faq-h">Questions, answered.</h2></div>
+    <div class="faq">
+      <details><summary>How much does it cost?</summary><div class="ans"><p>The download is free and includes Sectors 1 and 2, Academy puzzles 1 to 6, the Daily Protocol, Friend Challenges and the Commanders Rook, Wrench and Frost. Full Version is $4.99 one time (Sectors 3 to 5, Academy 7 to 15, Endless, Sandbox). Volt, Lancer and Atlas are $2.99 each, or $5.99 for all three. Double Blueprints is $3.99. The Founder's Pack is $14.99 and bundles all of it, plus three colour themes and a Founder badge (worth $21.94 bought separately).</p></div></details>
+      <details><summary>Do paid Commanders make me stronger?</summary><div class="ans"><p>No. Every Commander is balanced to the same power budget, so the paid ones play differently rather than better. Daily Protocol and Friend Challenges always use Rook for everyone, and Double Blueprints never touches leaderboards.</p></div></details>
+      <details><summary>Are there ads, energy or subscriptions?</summary><div class="ans"><p>No. There are no ads, no energy or lives, no timers and no subscriptions. Every game speed (1x to 4x) is free.</p></div></details>
+      <details><summary>Which devices does it run on?</summary><div class="ans"><p>iPhone and iPad with iOS 15 or later. The iPad layout uses a landscape sidebar instead of overlays. You can also try it in any modern browser at <a href="play/">the web edition</a>.</p></div></details>
+      <details><summary>Which languages are supported?</summary><div class="ans"><p>8: English, Arabic (with a right-to-left interface), Japanese, Korean, Traditional Chinese, German, French and Brazilian Portuguese.</p></div></details>
+      <details><summary>Does it work offline?</summary><div class="ans"><p>Yes. The campaign, Academy and Workshop play without a connection. Only the Daily leaderboard and Friend Challenges need the internet.</p></div></details>
+      <details><summary>What about my privacy?</summary><div class="ans"><p>There is no account and no tracking, and no ads or analytics. The optional online features use an anonymous random device token and an auto-generated callsign. Read the <a href="privacy.html">privacy policy</a>.</p></div></details>
+      <details><summary>I bought an unlock on another device. How do I restore it?</summary><div class="ans"><p>Open the Store or Settings and tap Restore Purchases, signed in with the same Apple ID.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="final-h">Build the maze. Break the swarm.</h2>
+    <p class="lead" style="margin-top:14px">The first wave takes a minute. The "one more try" lasts a lot longer.</p>
+    <div class="cta">
+      <span class="store-soon">Coming soon to the App Store</span>
+      <a class="btn btn-ghost" href="play/">Play in your browser</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb"><img src="icon-64.png" alt="" width="30" height="30" /> Aegis Grid</div>
+    <nav class="links" aria-label="Footer">
+      <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a>
+      <a href="ar/" lang="ar" hreflang="ar">العربية</a><a href="./" aria-current="page">English</a>
+    </nav>
+    <div>&copy; 2026 hassma0k. iPhone and iPad are trademarks of Apple Inc.</div>
+  </div>
+</footer>
+<script src="site.js" defer></script>
+</body>
+</html>
