@@ -1,4 +1,4 @@
-/* Aegis Grid site: (1) looping maze demo, (2) Arabic suggestion banner. No dependencies. */
+/* Wallwise site: (1) looping maze demo, (2) Arabic suggestion banner. No dependencies. */
 (function () {
   'use strict';
   /* ---------- language suggestion (never redirects) ---------- */

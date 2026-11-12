@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Wallwise: you have a friend challenge</title>
+  <meta name="description" content="A friend challenged you in Wallwise. Open the game, tap Challenge a Friend, and paste the code." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#070b18" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Wallwise" />
+  <meta property="og:title" content="Wallwise: a friend challenged you" />
+  <meta property="og:description" content="Same map, same waves, one winner. Open Wallwise and join with the code." />
+  <meta property="og:image" content="https://hassma0k.github.io/wallwise/og-en.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../icon-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Inter:wght@400;500;600&family=Rajdhani:wght@600;700&family=Tajawal:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="../landing.css" />
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../" dir="ltr"><img src="../icon-64.png" alt="" width="36" height="36" /> Wallwise</a>
+  <button class="lang" id="sw" type="button" style="background:none;cursor:pointer;font:inherit">العربية</button>
+</div></header>
+
+<main class="doc" style="text-align:center">
+  <div data-l="en">
+    <span class="eyebrow">Friend challenge</span>
+    <h1>A friend challenged you.</h1>
+    <p class="lead" style="margin-inline:auto">Same map. Same waves. Highest score wins.</p>
+  </div>
+  <div data-l="ar" hidden dir="rtl" lang="ar">
+    <span class="eyebrow">تحدّي صديق</span>
+    <h1>صديقك يتحدّاك.</h1>
+    <p class="lead" style="margin-inline:auto">الخريطة نفسها والموجات نفسها. الأعلى نتيجة يفوز.</p>
+  </div>
+
+  <strong class="codebox" id="code" aria-live="polite">------</strong>
+  <p><button class="btn btn-ghost btn-sm" id="copy" type="button">Copy code</button></p>
+
+  <div data-l="en" style="text-align:start">
+    <ol class="csteps">
+      <li>Open <b>Wallwise</b> on your iPhone or iPad.</li>
+      <li>Tap <b>Challenge a Friend</b>.</li>
+      <li>Paste the code under <b>Join with a code</b> and tap Join.</li>
+    </ol>
+  </div>
+  <div data-l="ar" hidden dir="rtl" lang="ar" style="text-align:start">
+    <ol class="csteps">
+      <li>افتح <b>Wallwise</b> على الآيفون أو الآيباد.</li>
+      <li>اضغط <b>تحدّي صديق</b>.</li>
+      <li>الصق الرمز في خانة <b>انضم برمز</b> ثم اضغط انضمام.</li>
+    </ol>
+  </div>
+
+  <div class="cta" style="justify-content:center;margin-top:26px">
+    <span class="store-soon">Coming soon to the App Store</span>
+    <a class="btn btn-ghost" id="play" href="../play/"><span data-l="en">Play in the browser</span><span data-l="ar" hidden>العب في المتصفح</span></a>
+  </div>
+  <p class="note"><span data-l="en">No iPhone? The browser edition works on any phone, tablet or computer.</span><span data-l="ar" hidden dir="rtl">لا تملك آيفون؟ نسخة المتصفح تعمل على أي جوال أو جهاز لوحي أو حاسوب.</span></p>
+</main>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var code = (q.get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+  var el = document.getElementById('code');
+  el.textContent = code.length === 6 ? code : '------';
+  var play = document.getElementById('play');
+  if (code.length === 6) play.href = '../play/?join=' + code;
+  var cp = document.getElementById('copy');
+  if (code.length !== 6) cp.hidden = true;
+  cp.addEventListener('click', function () {
+    var done = function () { cp.textContent = document.documentElement.lang === 'ar' ? 'تم النسخ' : 'Copied'; };
+    try { navigator.clipboard.writeText(code).then(done, done); } catch (e) { done(); }
+  });
+  var ar = (navigator.language || '').toLowerCase().indexOf('ar') === 0;
+  function setLang(a) {
+    document.documentElement.lang = a ? 'ar' : 'en';
+    document.documentElement.dir = a ? 'rtl' : 'ltr';
+    [].forEach.call(document.querySelectorAll('[data-l]'), function (n) { n.hidden = (n.getAttribute('data-l') === 'ar') !== a; });
+    document.getElementById('sw').textContent = a ? 'English' : 'العربية';
+    cp.textContent = a ? 'انسخ الرمز' : 'Copy code';
+    document.title = a ? 'Wallwise: صديقك يتحدّاك' : 'Wallwise: you have a friend challenge';
+    ar = a;
+  }
+  document.getElementById('sw').addEventListener('click', function () { setLang(!ar); });
+  setLang(ar);
+})();
+</script>
+</body>
+</html>
