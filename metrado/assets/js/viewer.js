@@ -26,6 +26,29 @@
     return x.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').slice(0, max || MAX_STR);
   }
 
+  // A pay link is only ever shown as a link when it is a plain https address: no spaces, quotes, angle brackets or backslashes.
+  function safePayUrl(x) {
+    var u = str(x, 1000).replace(/^\s+|\s+$/g, '');
+    return /^https:\/\/[^\s\/$.?#<>"'`\\][^\s<>"'`\\]*$/i.test(u) && u.length <= 1000 ? u : '';
+  }
+
+  // The pay link's host name (shown under the button), e.g. "paypal.me".
+  function payHost(u) {
+    var m = /^https:\/\/([^\/?#:]+)/i.exec(u);
+    return m ? m[1].toLowerCase() : '';
+  }
+
+  // The button's label: the deposit with its amount when there is a deposit and one option; "Pay now" otherwise.
+  // labels = { dep: 'Pay the deposit · {amount}', depPlain: 'Pay the deposit', now: 'Pay now' }.
+  function payAction(data, labels) {
+    if (!data.pay) return null;
+    if (data.deposit || data.depositAmount) {
+      var label = data.depositAmount && data.options.length === 1 ? fill(labels.dep, { amount: data.depositAmount }) : labels.depPlain;
+      return { href: data.pay, label: label, kind: 'deposit' };
+    }
+    return { href: data.pay, label: labels.now, kind: 'now' };
+  }
+
   function normalize(o, fallbackLang) {
     if (!o || typeof o !== 'object' || Array.isArray(o)) return null;
     var biz = o.biz && typeof o.biz === 'object' ? o.biz : {};
@@ -58,6 +81,8 @@
       title: str(o.title, 160),
       options: options,
       deposit: str(dep, 160),
+      depositAmount: str(o.depositAmount, 60),
+      pay: safePayUrl(o.pay),
       termsSummary: str(o.termsSummary, 1200)
     };
   }
@@ -132,7 +157,7 @@
     return out;
   }
 
-  root.MetradoViewer = { brandLines: brandLines, decodePayload: decodePayload, normalize: normalize, acceptMessage: acceptMessage, acceptLinks: acceptLinks, phoneDigits: phoneDigits };
+  root.MetradoViewer = { brandLines: brandLines, payAction: payAction, payHost: payHost, safePayUrl: safePayUrl, decodePayload: decodePayload, normalize: normalize, acceptMessage: acceptMessage, acceptLinks: acceptLinks, phoneDigits: phoneDigits };
 
   // ---------- DOM (browser only) ----------
   if (typeof document === 'undefined') return;
@@ -227,6 +252,16 @@
 
       var terms = d.termsSummary ? el('section', { 'class': 'doc-sec' }, [tx('h2', '', I.terms), tx('p', 'doc-small-text', d.termsSummary)]) : null;
       if (terms) doc.appendChild(terms);
+
+      // pay: only for a real https link; opens the business's own payment page
+      var pa = payAction(d, { dep: I.payDeposit, depPlain: I.payDepositPlain, now: I.payNow });
+      if (pa && safePayUrl(pa.href)) {
+        doc.appendChild(el('section', { 'class': 'doc-sec pay-box' }, [
+          el('a', { 'class': 'btn btn-brand btn-block pay-btn', href: pa.href, rel: 'noopener noreferrer', target: '_blank', text: pa.label }),
+          // the destination's address, so a client always sees where the button goes
+          tx('p', 'help', I.payNote + ' · ' + payHost(pa.href))
+        ]));
+      }
 
       // accept
       var acc = el('section', { 'class': 'doc-sec accept' });
