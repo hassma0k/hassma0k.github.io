@@ -1,27 +1,57 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Verify a certificate — The CFO Game</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><style>body{font:16px/1.65 -apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:0 auto;padding:32px 20px 64px;color:#1a1d21;background:#fff}h1{font-size:26px;margin:0 0 4px}.muted{color:#6a7078;font-size:14px}a{color:#8a6d2f}hr{border:0;border-top:1px solid #e6e6ea;margin:28px 0}.card{border:2px solid #c9ac72;border-radius:14px;padding:20px 22px;margin-top:22px;background:#fcfaf5}.ok{color:#2c6a54;font-weight:800}.bad{color:#a8433f;font-weight:800}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px}.tile{background:#f6f2ea;border-radius:10px;padding:10px 12px}.tile b{display:block;font-size:11px;letter-spacing:.08em;color:#8a6d2f}.name{font:italic 700 28px/1.2 Georgia,serif;margin:6px 0 2px}.ar{direction:rtl;text-align:right}</style></head><body>
-<h1>Certificate verification</h1><p class="muted">The CFO Game · Performance Certificate</p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Verify a certificate — The CFO Game</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><style>body{font:16px/1.65 -apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:0 auto;padding:32px 20px 64px;color:#1a1d21;background:#fff}h1{font-size:26px;margin:0 0 4px}.muted{color:#6a7078;font-size:14px}a{color:#8a6d2f}hr{border:0;border-top:1px solid #e6e6ea;margin:28px 0}.card{border:2px solid #c9ac72;border-radius:14px;padding:20px 22px;margin-top:22px;background:#fcfaf5}.ok{color:#2c6a54;font-weight:800}.bad{color:#a8433f;font-weight:800}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px}.tile{background:#f6f2ea;border-radius:10px;padding:10px 12px}.tile b{display:block;font-size:11px;letter-spacing:.08em;color:#8a6d2f}.name{font:italic 700 28px/1.2 Georgia,serif;margin:6px 0 2px}.ar{direction:rtl;text-align:right}ul.mods{margin:12px 0 0;padding-left:20px}ul.mods li{margin:3px 0}ul.mods a{color:#1a1d21;font-weight:600;text-decoration:none}ul.mods span{color:#6a7078;font-size:14px}</style></head><body>
+<h1>Certificate verification</h1><p class="muted">The CFO Game · Certificate of Completion</p>
 <div id="out" class="card"><p class="muted">Checking…</p></div>
 <hr>
-<p class="muted">A CFO Game Performance Certificate records the result of a completed run in The CFO Game, an educational corporate-finance simulation. It is <strong>not</strong> an accredited qualification. All companies and figures in the game are fictional. This page checks that the details in the link match the certificate ID; it does not store or send any data.</p>
-<p class="muted ar">شهادة الأداء من The CFO Game توثّق نتيجة جولة مكتملة في محاكاة تعليمية للمالية المؤسسية، وليست مؤهلاً معتمداً. هذه الصفحة تتحقق من تطابق البيانات مع رقم الشهادة ولا تحفظ أي بيانات.</p>
-<p class="muted"><a href="https://apps.apple.com/app/id6810646240">The CFO Game on the App Store</a> · <a href="https://hassma0k.github.io/cfo-game-legal/privacy.html">Privacy</a> · <a href="https://hassma0k.github.io/cfo-game-legal/terms.html">Terms</a></p>
+<p class="muted">A CFO Game Certificate of Completion lists the modules a person has completed in The CFO Game, a corporate-finance decision simulation. Each module is a simulated CFO decision, its lesson and a passed knowledge check. The CFO Game is a simulation game, <strong>not an accredited educational institution</strong>, and the certificate is <strong>not an academic or professional qualification</strong>. This page checks that the details in the link match the certificate ID; it does not store or send any data.</p>
+<p class="muted ar">شهادة الإتمام من The CFO Game تذكر الوحدات التي أكملها الشخص في محاكاة قرارات المالية المؤسسية: قرار مالي محاكى، ودرسه، واختبار فهم مجتاز. The CFO Game لعبة محاكاة وليست جهة تعليمية معتمدة، والشهادة ليست مؤهلاً أكاديمياً أو مهنياً. هذه الصفحة تتحقق من تطابق البيانات مع رقم الشهادة ولا تحفظ أي بيانات.</p>
+<p class="muted"><a href="https://hassma0k.github.io/cfo/learn/">The CFO Playbook (free lessons)</a> · <a href="https://apps.apple.com/app/id6810646240">The CFO Game on the App Store</a> · <a href="https://hassma0k.github.io/cfo-game-legal/privacy.html">Privacy</a> · <a href="https://hassma0k.github.io/cfo-game-legal/terms.html">Terms</a></p>
 <script>
-// Must match src/engine/certificate.ts (KEY, field order, hash and alphabet).
-var KEY = 'cfo-game-cert-v1', A = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+// Must match src/engine/certificate.ts (KEY, field order, hash, alphabet) and src/engine/lessons.ts MODULE_ORDER.
+var A = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+var MODULES = [
+  ['cashflow', 'Trapped Cash', 'Cash-conversion cycle'],
+  ['capstruct', 'The Leverage Line', 'Trade-off theory of capital structure'],
+  ['capalloc', 'Fund It or Kill It', 'Positive-NPV rule · capital rationing'],
+  ['workingcap', 'Cash Stuck in Stock', 'Cash-conversion cycle · supplier financing'],
+  ['intrate', 'The Refinancing Wall', 'Term structure · refinancing & duration risk'],
+  ['tariffs', 'Landed Cost, Not Sticker Price', 'Total landed cost · supply-chain resilience'],
+  ['zbb', 'Cut Without Cutting Muscle', 'Zero-based budgeting (ZBB)'],
+  ['genai', 'Which AI Actually Pays', 'Positive-NPV rule applied to automation'],
+  ['techdebt', 'The Debt You Can’t See', 'Technical debt as fragile leverage'],
+  ['rollfcst', 'Forecasts the Board Believes', 'Driver-based rolling forecasts'],
+  ['restructure', 'One Quarter From the Edge', 'Financial distress · covenant management'],
+  ['rhq', 'The 30-Year Tax Holiday', 'Effective tax rate · market access (Saudi RHQ programme)'],
+  ['zatca', 'Compliance That Pays You Back', 'Compliance as a cash lever · e-invoicing'],
+  ['autobus', 'Starve the Losers', 'Internal capital markets · ROIC-based allocation'],
+  ['execpresence', 'Credibility Is Capital', 'Board communication · credibility']
+];
 function hash32(parts) { var h = 0x811c9dc5, s = parts.join('|'); for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); } return h >>> 0; }
 function certId(f) { var a = hash32(f), b = hash32(['b'].concat(f, [a])), o = ''; for (var i = 0; i < 5; i++) o += A[(a >>> (i * 5)) & 31]; o += '-'; for (i = 0; i < 5; i++) o += A[(b >>> (i * 5)) & 31]; return o; }
 function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+function day(d) { return d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : ''; }
 var q = new URLSearchParams(location.search), out = document.getElementById('out');
-var n = (q.get('n') || '').trim(), g = q.get('g') || '', e = q.get('e') || '', p = q.get('p') || '', r = q.get('r') || '', t = q.get('t') || '', d = q.get('d') || '', id = (q.get('id') || '').toUpperCase();
+var n = (q.get('n') || '').trim(), d = q.get('d') || '', id = (q.get('id') || '').toUpperCase();
+var invalid = '<p class="bad">✗ Not valid</p><p class="muted">The details in this link do not match certificate ID ' + esc(id) + '. The link may have been edited or copied incompletely.</p>';
 if (!n || !id) {
   out.innerHTML = '<p class="bad">No certificate details in this link.</p><p class="muted">Open the verification link printed on the certificate, or the one attached to the LinkedIn credential.</p>';
-} else if (certId([KEY, n, g, e, p, r, t, d]) === id) {
-  var ev = Number(e), when = d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
-  out.innerHTML = '<p class="ok">✓ Valid certificate</p><div class="name">' + esc(n) + '</div><p class="muted">completed a ' + esc(t) + '-decision run as CFO · issued ' + esc(when) + '</p>' +
-    '<div class="grid"><div class="tile"><b>GRADE</b>' + esc(g) + '</div><div class="tile"><b>EVA CREATED</b>' + (ev >= 0 ? '+' : '−') + 'SAR ' + Math.abs(ev).toFixed(1) + 'M</div><div class="tile"><b>STANDING</b>Ahead of ~' + esc(p) + '% of simulated CFOs</div><div class="tile"><b>CAREER RANK</b>' + esc(r) + '</div></div>' +
-    '<p class="muted" style="margin-top:12px">Certificate ID ' + esc(id) + '</p>';
+} else if (q.get('v') === '2') {
+  // Certificate of Completion: name, completed modules (mask in course order), date.
+  var m = (q.get('m') || '').toLowerCase(), mask = parseInt(m, 16) || 0;
+  if (certId(['cfo-game-cert-v2', n, m, d]) === id) {
+    var list = MODULES.filter(function (x, i) { return mask & (1 << i); });
+    out.innerHTML = '<p class="ok">✓ Valid certificate</p><div class="name">' + esc(n) + '</div><p class="muted">Certificate of Completion · ' + list.length + ' of 15 modules · issued ' + esc(day(d)) + '</p>' +
+      '<ul class="mods">' + list.map(function (x) { return '<li><a href="https://hassma0k.github.io/cfo/learn/' + x[0] + '.html">' + esc(x[1]) + '</a> <span>— ' + esc(x[2]) + '</span></li>'; }).join('') + '</ul>' +
+      '<p class="muted" style="margin-top:12px">Certificate ID ' + esc(id) + ' · a simulation-game certificate, not an accredited qualification.</p>';
+  } else out.innerHTML = invalid;
 } else {
-  out.innerHTML = '<p class="bad">✗ Not valid</p><p class="muted">The details in this link do not match certificate ID ' + esc(id) + '. The link may have been edited or copied incompletely.</p>';
+  // Older Performance Certificates (before 1.7) stay verifiable.
+  var g = q.get('g') || '', e = q.get('e') || '', p = q.get('p') || '', r = q.get('r') || '', t = q.get('t') || '';
+  if (certId(['cfo-game-cert-v1', n, g, e, p, r, t, d]) === id) {
+    var ev = Number(e);
+    out.innerHTML = '<p class="ok">✓ Valid certificate</p><div class="name">' + esc(n) + '</div><p class="muted">Performance Certificate (earlier format) · a ' + esc(t) + '-decision run · issued ' + esc(day(d)) + '</p>' +
+      '<div class="grid"><div class="tile"><b>GRADE</b>' + esc(g) + '</div><div class="tile"><b>EVA CREATED</b>' + (ev >= 0 ? '+' : '−') + 'SAR ' + Math.abs(ev).toFixed(1) + 'M</div><div class="tile"><b>STANDING</b>Ahead of ~' + esc(p) + '% of simulated CFOs</div><div class="tile"><b>CAREER RANK</b>' + esc(r) + '</div></div>' +
+      '<p class="muted" style="margin-top:12px">Certificate ID ' + esc(id) + '</p>';
+  } else out.innerHTML = invalid;
 }
 </script>
 </body></html>

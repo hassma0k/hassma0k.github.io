@@ -1,0 +1,3 @@
+document.querySelectorAll('.quiz').forEach(function(z){var qs=z.querySelectorAll('.q'),done=0,ok=0,sc=z.querySelector('.score');
+qs.forEach(function(q){var c=+q.dataset.correct,bs=q.querySelectorAll('.opts button');bs.forEach(function(b){b.addEventListener('click',function(){if(q.dataset.done)return;q.dataset.done=1;done++;var k=+b.dataset.k;if(k===c)ok++;bs.forEach(function(x){x.disabled=true;if(+x.dataset.k===c)x.classList.add('right');});if(k!==c)b.classList.add('wrong');q.querySelector('.why').hidden=false;
+if(done===qs.length){sc.hidden=false;sc.textContent=ok+' / '+qs.length+(ok===qs.length?' — spot on.':ok>=2?' — well done.':' — read the idea again and retry in the app.');}});});});});
