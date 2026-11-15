@@ -25,6 +25,8 @@ figcaption{font-size:15px;color:var(--t2);margin-top:8px}
 .f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:17px;line-height:1.45;color:var(--gold2);margin:6px 0 8px;white-space:normal;word-break:break-word}
 .formula dl,.terms{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:0;font-size:15.5px}.formula dt,.terms dt{font-weight:700;color:var(--t1)}.formula dd,.terms dd{margin:0;color:var(--t2)}
 details{margin:6px 0 12px}summary{cursor:pointer;font-weight:700;color:var(--gold)}.steps{margin:10px 0 0;padding-left:22px}.steps li{margin-bottom:8px}
+.options p{background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 8px;font-size:16.5px}.plain{color:var(--t2);margin:0}
+.search input{width:100%;font:inherit;font-size:17px;color:var(--t1);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:6px 0 4px}
 .answer{background:rgba(143,191,170,.08);border:1px solid rgba(143,191,170,.35);border-radius:12px;padding:10px 12px}
 .btn{display:inline-block;background:var(--gold);color:#17130A;text-decoration:none;font-weight:800;border-radius:12px;padding:12px 16px;margin:6px 8px 0 0}.btn:hover{background:var(--gold2);color:#17130A}.btn.ghost{background:transparent;color:var(--t1);border:1px solid var(--line)}
 .mist{display:grid;gap:10px}.mist>div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}.bad{color:var(--neg);font-weight:700;margin:0 0 4px}.good{color:var(--pos);margin:0}
