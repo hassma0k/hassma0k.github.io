@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>بصيرة - من القرآن</title>
+  <meta name="description" content="بصيرة - من القرآن: آيةٌ ومناجاةٌ لكل شعور، والمصحف كاملًا بخط مصحف المدينة، ورحلة القرآن، ومكتبة الأدعية. يعمل دون اتصال، بلا حساب ولا تتبّع.">
+  <meta name="theme-color" content="#F3EDE2">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="بصيرة">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/KFGQPC-UthmanicHafs-v22.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/NotoNaskhArabic-VF.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="app.css">
+  <script>
+    // Theme before first paint (no flash): day | night | auto (localStorage only, on this device).
+    (function () {
+      var t = "day";
+      try { var s = JSON.parse(localStorage.getItem("baseera.settings") || "{}"); if (s.theme) t = s.theme; } catch (e) {}
+      if (t === "auto") t = (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "night" : "day";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div id="app" aria-live="polite"><div class="loading"><div class="spinner"></div></div></div>
+  <nav class="tabbar" id="tabbar" aria-label="التبويبات"><div class="tabbar-in" id="tabs"></div></nav>
+  <noscript><p style="padding:24px;text-align:center">يحتاج تطبيق بصيرة على الويب إلى تفعيل JavaScript.</p></noscript>
+</body>
+</html>
