@@ -82,4 +82,4 @@ body.live .soon-only{display:none}
 .hero-in{grid-template-columns:1.1fr .9fr;padding-block:20px 80px}
 .doc{padding:44px}
 }
-@media(min-width:1000px){.grid.g3{grid-template-columns:repeat(3,1fr)}.steps.four{grid-template-columns:repeat(4,1fr)}section{padding-block:72px}}
+@media(min-width:1000px){.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g4{grid-template-columns:repeat(4,1fr)}.steps.four{grid-template-columns:repeat(4,1fr)}section{padding-block:72px}}
