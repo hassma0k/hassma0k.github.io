@@ -154,7 +154,9 @@
       rec: options.length > 1 ? idx(o.rec) : -1,
       extras: extras,
       mf: moneyFormat(o.mf),
-      dp: dp
+      dp: dp,
+      // mw:0 = the sender hides the "Made with Metrado" footer (Pro). Absent or anything else = shown.
+      mw: o.mw === 0 ? 0 : 1
     };
   }
 
@@ -281,6 +283,10 @@
     }
 
     function render(d) {
+      if (d.mw === 0 && typeof document.querySelectorAll === 'function') {
+        var promo = document.querySelectorAll('[data-made-promo]');
+        for (var pi = 0; pi < promo.length; pi++) promo[pi].hidden = true;
+      }
       // The option the quote shows (Better by default), and the extras ticked: none until the client ticks one.
       var sel = d.sel;
       var ticked = [];

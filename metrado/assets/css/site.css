@@ -354,6 +354,7 @@ body.demo { background: var(--surface-0); }
 .made-link img { border-radius: 6px; }
 .made-link b { color: var(--label); }
 .made-link:hover { border-color: var(--primary); }
+.made-line { font-size: .8125rem; color: var(--label-3); margin-top: var(--s-2); }
 .made-legal { font-size: .8125rem; color: var(--label-3); margin-top: var(--s-3); }
 .made-legal a { color: var(--label-3); }
 
