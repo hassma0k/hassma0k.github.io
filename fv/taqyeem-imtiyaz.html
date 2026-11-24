@@ -125,7 +125,7 @@ footer a{font-weight:600}</style>
 (function(){
   var f=document.getElementById('fvcalc'); if(!f) return;
   var ar=document.documentElement.lang==='ar';
-  function n(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)?v:0;}
+  function n(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[٠-٩]/g,function(d){return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);}).replace(/[^0-9.]/g,''));return isFinite(v)?v:0;}
   function fmt(x){return 'SAR\u00A0'+Math.round(x).toLocaleString('en-US');}
   function run(){
     var rev=n('rev')*12, cost=n('cost')*12, r=n('risk')||3, m=n('mgmt')||3, ask=n('ask');

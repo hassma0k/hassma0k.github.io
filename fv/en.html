@@ -194,6 +194,29 @@ footer a{color:var(--ink2);font-weight:600;text-decoration:none;margin-inline-en
   </form>
 </div></section>
 
+<section id="takeover" aria-labelledby="tk-h" style="padding-top:10px"><div class="wrap">
+  <div class="sec-head"><p class="kicker">Takeover calculator</p><h2 id="tk-h">How many months to get your key money back?</h2><p class="sub">Numbers from the ad — the result updates instantly.</p></div>
+  <form id="tkcalc" class="calc" onsubmit="return false">
+    <div class="fields">
+      <div><label for="tkask">Takeover amount (SAR)</label><input id="tkask" inputmode="decimal" value="90000"></div>
+      <div><label for="tkprofit">Expected monthly net profit</label><input id="tkprofit" inputmode="decimal" value="6500"></div>
+      <div><label for="tklease">Months left on the lease</label><input id="tklease" inputmode="decimal" value="12"></div>
+      <div><label for="tkrent">Annual rent</label><input id="tkrent" inputmode="decimal" value="60000"></div>
+      <div><label for="tkequip">Equipment & stock value</label><input id="tkequip" inputmode="decimal" value="35000"></div>
+      <div><label for="tkfee">Landlord transfer fee</label><input id="tkfee" inputmode="decimal" value="10000"></div>
+    </div>
+    <div class="out" aria-live="polite">
+      <div class="lbl">You recover your money in</div>
+      <div class="val" id="tkval">—</div>
+      <div class="rng" id="tkverdict"></div>
+      <div class="note" id="tkmax"></div>
+      <div class="teaser" id="tkover" style="color:#b3261e;background:#fdecea"></div>
+      <a class="btn solid" href="https://apps.apple.com/sa/app/id6805596650">Open the full calculator with 8 checks</a>
+    </div>
+    <p class="disc">Indicative estimate based on your numbers — not a certified valuation and not financial advice.</p>
+  </form>
+</div></section>
+
 <hr class="rule">
 
 <section id="how" aria-labelledby="how-h"><div class="wrap">
@@ -251,9 +274,43 @@ footer a{color:var(--ink2);font-weight:600;text-decoration:none;margin-inline-en
 </div></footer>
 <script>
 (function(){
+  // Shared deal links: #v=revMonthly,costMonthly,risk,mgmt,ask  or  #t=ask,profit,lease,rent,equip,fee
+  var h = location.hash || '', m = /^#([vt])=([0-9,.-]+)$/.exec(h); if(!m) return;
+  var a = m[2].split(','), set = function(id, v){ var el = document.getElementById(id); if(el && v !== undefined && v !== '') el.value = v; };
+  if(m[1]==='v'){ set('rev',a[0]); set('cost',a[1]); set('risk',a[2]); set('mgmt',a[3]); set('ask', +a[4] > 0 ? a[4] : ''); }
+  else { set('tkask',a[0]); set('tkprofit',a[1]); set('tklease',a[2]); set('tkrent',a[3]); set('tkequip',a[4]); set('tkfee',a[5]); }
+  var target = document.getElementById(m[1]==='v' ? 'calc' : 'takeover');
+  if(target){
+    var note = document.createElement('p'); note.className = 'eyebrow'; note.textContent = "A friend shared this deal with you — here are its numbers. Change them and try your own.";
+    target.querySelector('.sec-head').prepend(note);
+    setTimeout(function(){ target.scrollIntoView(); }, 50);
+  }
+})();
+(function(){
+  var f = document.getElementById('tkcalc'); if(!f) return;
+  var ar = document.documentElement.lang === 'ar';
+  function n(id){ var s = String(document.getElementById(id).value).replace(/[٠-٩]/g, function(d){ return '٠١٢٣٤٥٦٧٨٩'.indexOf(d); }).replace(/[^0-9.]/g,''); var v = parseFloat(s); return isFinite(v) ? v : 0; }
+  function sar(x){ return 'SAR ' + Math.round(x).toLocaleString('en-US'); }
+  function run(){
+    var ask = n('tkask'), profit = n('tkprofit'), lease = n('tklease'), fee = n('tkfee'), total = ask + fee;
+    var val = document.getElementById('tkval'), vd = document.getElementById('tkverdict'), mx = document.getElementById('tkmax'), ov = document.getElementById('tkover');
+    if(!(profit > 0) || !(total > 0)){ val.textContent = '—'; vd.textContent = ''; mx.textContent = ''; ov.textContent = ''; return; }
+    var pb = total / profit, horizon = lease > 0 ? Math.min(18, lease) : 18, maxFair = Math.max(0, profit * horizon - fee);
+    val.textContent = (Math.round(pb * 10) / 10) + ' ' + "months";
+    var risk = lease > 0 && pb > lease, good = !risk && pb <= 18;
+    vd.textContent = risk ? "Risky — the lease ends before you recover" : good ? "Reasonable — you recover within 18 months" : "High — recovery takes over 18 months";
+    vd.style.color = risk ? '#b3261e' : good ? '#1f7a35' : '#9a4a00'; vd.style.fontWeight = '700';
+    mx.textContent = "Highest sensible takeover price" + ': ' + sar(maxFair);
+    ov.textContent = ask > maxFair ? "You could overpay {x} above the sensible price".replace('{x}', sar(ask - maxFair)) : '';
+  }
+  f.addEventListener('input', run); run();
+})();
+</script>
+<script>
+(function(){
   var f=document.getElementById('fvcalc'); if(!f) return;
   var ar=document.documentElement.lang==='ar';
-  function n(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)?v:0;}
+  function n(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[٠-٩]/g,function(d){return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);}).replace(/[^0-9.]/g,''));return isFinite(v)?v:0;}
   function fmt(x){return 'SAR\u00A0'+Math.round(x).toLocaleString('en-US');}
   function run(){
     var rev=n('rev')*12, cost=n('cost')*12, r=n('risk')||3, m=n('mgmt')||3, ask=n('ask');
