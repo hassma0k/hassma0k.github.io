@@ -1,0 +1,1 @@
+import{r as a,j as r,M as m}from"./index-B6QCk24h.js";function c(o){const n=o.rounds[0];return a.useEffect(()=>{var e;return(e=o.onRound)==null?void 0:e.call(o,0,1)},[]),r.jsx(m,{pairs:n.pairs,set:n.set,color:o.color,onPair:(e,t)=>o.onCorrect(`mem:${e}`,t),onMismatch:()=>o.onMiss(),onDone:o.onDone})}export{c as default};
