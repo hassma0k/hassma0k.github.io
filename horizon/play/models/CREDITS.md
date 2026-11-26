@@ -10,9 +10,11 @@ Icons: game-icons.net icons (if used) CC BY 3.0 by their authors; Phosphor Icons
 Fonts: Alexandria, IBM Plex Sans Arabic — SIL Open Font License 1.1.
 
 ## Audio
+
+Music by Eric Matyas — www.soundimage.org (free with in-app credit; shown in Settings › Credits): "Ancient Game Open" (title), "Preparing for Battle" (calm A), "Ancient Crusades" (calm B), "Crusaders Approaching" (tension), "Tower Defense" (battle). Encoded by scripts/encode-audio.mjs (seamless 2 s loop crossfade, -16 LUFS).
+CC0: cynicmusic — "Victory1" https://opengameart.org/content/victory-theme-for-rpg (victory theme, first 22 s).
+CC0: Kenney Interface Sounds — ui_tap, ui_confirm, ui_deny, ui_open, ui_close, cardLift, coin, thunk, starStamp.
 CC BY 4.0 (attribution required — shown in Settings › Credits):
-- "Mystery Bazaar" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700005 (map music)
-- "Hidden Wonders" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700006 (menu music)
 - "Discovery Hit" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300023 (victory sting)
 - "Greta Sting" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100530 (defeat sting)
 - "Light Sting" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100433 (capture fanfare)
@@ -27,3 +29,7 @@ CC0 (no attribution required, credited with thanks):
 - CoMiGo / untamedpixels — "150 Combat Sound Effects" (Electric Explosion, SAM intercept) https://opengameart.org/content/150-combat-sound-effects — CC0
 - "Missile sound" (missile launch) https://opengameart.org/content/missile-sound — CC0
 - Original synthesised effects (radar ping, city level-up, research unlock, corridor open) generated for this project.
+
+## Golden pack additions (build 3)
+CC0: KayKit Space Base Bits 1.0 and City Builder Bits 1.0 by Kay Lousberg (kaylousberg.com; GitHub KayKit-Game-Assets) -> public/models/kaykit-space, kaykit-city. PolyHaven "Kloofendal 48d Partly Cloudy (Pure Sky)" 1k HDRI (polyhaven.com, CC0) -> public/hdri. Portraits in public/portraits are renders of our own pack (scripts/render-portraits.mjs).
+Not obtained: Quaternius Downtown City MegaKit and Ultimate Spaceships (no direct automated download); KayKit City Builder Bits replaces the former, existing CC BY jet/drone stay.
