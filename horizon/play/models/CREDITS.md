@@ -11,6 +11,16 @@ Fonts: Alexandria, IBM Plex Sans Arabic — SIL Open Font License 1.1.
 
 ## Audio
 
+Music (v1.0-b8) — two new soundtrack sets, chosen in Settings › Soundtrack (files public/audio/music/<set>/, sources in .art-src/audio-b8):
+Soundtrack "Calm Command" (public/audio/music/calm, default):
+- "Home Was You" (title), "Penumbra" (calm), "Unraveling" (calm), "Wildflowers" (battle, excerpt 1:30-4:30) by Scott Buckley – released under CC-BY 4.0. www.scottbuckley.com.au (https://www.scottbuckley.com.au/library/home-was-you/ , /penumbra/ , /unraveling/ , /wildflowers/). Trimmed, faded and loudness-normalised.
+Soundtrack "Desert Dawn" (public/audio/music/dawn):
+- "Mystery Bazaar" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (title)
+- "Mystical Enigmatic Background Music" by Cleyton Kauffman, CC0, https://opengameart.org/content/mystical-enigmatic-background-music (calm)
+- "Egyptian meditation music" by brandon75689, CC0, https://opengameart.org/content/egyptian-meditation-music (calm)
+- "Arabesque" by brainiac256, CC-BY 3.0, https://opengameart.org/content/arabesque (battle)
+Soundtrack "Classic" = the v1.0-b7 Kevin MacLeod files at public/audio/music/ (below).
+
 Music (v1.0-b7), all by Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — shown in Settings › Credits:
 - "Ibn Al-Noor" (title) https://incompetech.com/music/royalty-free/music.html?isrc=Ibn+Al-Noor
 - "Eastern Thought" (calm A), "Desert City" (calm B), "Dhaka" (tension), "Ryno's Theme" (battle) — same site, same licence.
