@@ -11,7 +11,10 @@ Fonts: Alexandria, IBM Plex Sans Arabic — SIL Open Font License 1.1.
 
 ## Audio
 
-Music by Eric Matyas — www.soundimage.org (free with in-app credit; shown in Settings › Credits): "Ancient Game Open" (title), "Preparing for Battle" (calm A), "Ancient Crusades" (calm B), "Crusaders Approaching" (tension), "Tower Defense" (battle). Encoded by scripts/encode-audio.mjs (seamless 2 s loop crossfade, -16 LUFS).
+Music (v1.0-b7), all by Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/ — shown in Settings › Credits:
+- "Ibn Al-Noor" (title) https://incompetech.com/music/royalty-free/music.html?isrc=Ibn+Al-Noor
+- "Eastern Thought" (calm A), "Desert City" (calm B), "Dhaka" (tension), "Ryno's Theme" (battle) — same site, same licence.
+Encoded by scripts/encode-audio.mjs (excerpts, seamless 2.5 s loop crossfade, 10 kHz low-pass, -18 LUFS, 112 kbps). Replaced Eric Matyas / soundimage.org tracks.
 CC0: cynicmusic — "Victory1" https://opengameart.org/content/victory-theme-for-rpg (victory theme, first 22 s).
 CC0: Kenney Interface Sounds — ui_tap, ui_confirm, ui_deny, ui_open, ui_close, cardLift, coin, thunk, starStamp.
 CC BY 4.0 (attribution required — shown in Settings › Credits):
